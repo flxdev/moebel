@@ -128,14 +128,14 @@ body {
   background: linear-gradient(90deg, #ffffff 68%, #f0f7cf 32%); }
 
 h1 {
-  font-family: 'FuturaRegular';
+  font-family: 'FuturaMedium';
   font-size: 4.5rem;
   color: #d9b189;
   text-transform: uppercase;
   line-height: 1.1; }
 
 h2 {
-  font-family: 'FuturaRegular';
+  font-family: 'FuturaBook';
   font-size: 3.125rem;
   color: #d9b189;
   text-transform: uppercase;
@@ -194,6 +194,9 @@ p {
 .container-home-work, .container-home-news {
   position: relative;
   width: 100%; }
+
+.container-home-news {
+  padding-bottom: 140px; }
 
 .container-header-fix {
   width: 100%;
