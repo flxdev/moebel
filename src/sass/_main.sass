@@ -1,0 +1,572 @@
+*, *:after, *:before
+	box-sizing: border-box
+a
+	text-decoration: none
+img
+	display: block
+button
+	background-color: transparent
+	outline: none
+svg
+	width: 100%
+	height: 100%
+body
+	width: 100%
+	height: 100%
+	background: linear-gradient(90deg, #ffffff 68%, #f0f7cf 32%)
+$large: 1px
+=display-inline-top
+	display: inline-block
+	vertical-align: top
+=display-inline-middle
+	display: inline-block
+	vertical-align: middle
+=color-brown
+	color: #d9b189
+=color-brown-hover
+	color: #c6a079
+=container
+	position: relative
+	width: 100%
+=container-content
+	width: 1180px
+	margin: 0 auto
+h1
+	font-family: 'FuturaRegular'
+	font-size: 4.5rem
+	@include color-brown
+	text-transform: uppercase
+	line-height: 1.1
+h2
+	font-family: 'FuturaRegular'
+	font-size: 3.125rem
+	@include color-brown
+	text-transform: uppercase
+	line-height: 1.1
+h3
+	font-family: 'FuturaMedium'
+	font-size: 1.5rem
+	color: #585450
+	text-transform: uppercase
+h4
+    font-family: 'FuturaMedium'
+    color: #585450
+    font-size: 1.25rem
+    line-height: 1.4
+h5
+    font-family: 'FuturaBook'
+    font-size: 1.25rem
+    line-height: 1.5
+    color: #75706b
+    letter-spacing: -1px
+p
+	font-family: 'FuturaBook'
+	font-size: 1.25rem
+	color: #bebcba
+	line-height: 1.3
+
+.link
+    font-family: 'FuturaBook'
+    font-size: 1.25rem
+    position: relative
+    line-height: 1.6
+    display: inherit
+    @include color-brown
+    &:after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 1px
+        background-color: #d9b189
+        bottom: 0
+        left: 0
+.link:hover
+    transition: all .3s ease-in-out
+    @include color-brown-hover
+    &:after
+        transition: all .3s ease-in-out
+        height: 0
+.container-home-work, .container-home-news
+	@include container
+.container-header-fix
+	width: 100%
+	position: fixed
+	@include rem(padding-top, 2.75)
+	overflow: hidden
+.company-header-logo
+	padding-left: 4%
+	position: fixed
+	transition: all .3s ease-out
+	@include rem(padding-top, 2.75)
+	float: left
+	left: 0
+	z-index: 50
+.company-header-logo_link
+	width: 10.15rem
+	display: block
+	img
+		width: 100%
+.anchor-feedback-header
+	padding-right: 4%
+	position: fixed
+	@include rem(padding-top, 2.75)
+	float: right
+	right: 0
+	z-index: 50
+	transition: all .3s ease-out
+.anchor-feedback-header_link
+	width: 3.7rem
+	display: block
+	img
+		width: 100%
+.container-header-parallax
+	margin: 0 auto
+	@include rem(padding-top, 3.7)
+	padding-left: 38.5%
+	position: fixed
+	width: 100%
+	z-index: 50
+	transform: translate3d(0px, 0, 0px)
+	transition: all .3s ease-out
+.container-language-selection
+	color: #585450
+	@include display-inline-top
+	line-height: 1
+	span
+		padding: 0 5px
+.container-language-selection_link
+	font-family: 'FuturaRegular'
+	font-size: 1rem
+	color: #585450
+	&:hover
+		cursor: pointer
+		@include color-brown-hover
+.container-language-selection_link.active
+	@include color-brown
+.container-contact-header
+	@include display-inline-top
+	margin-left: 13%
+	transition: all .3s ease-out
+.container-contact-header_label
+	font-family: 'FuturaRegular'
+	font-size: 1.1rem
+	color: #75706b
+	@include rem(padding-bottom, 0.9)
+.container-contact-header_tel
+	font-family: 'FuturaRegular'
+	font-size: 1.1rem
+	color: #585450
+	@include rem(padding-bottom, 0.3)
+.container-contact-header_email
+	font-family: 'FuturaRegular'
+	font-size: 1.1rem
+	@include color-brown
+	text-decoration: underline
+	&:hover
+		@include color-brown-hover
+		text-decoration: none
+.container-header-nav
+	padding-left: 11%
+	line-height: 1
+	@include display-inline-top
+	li
+		display: inline
+		padding-right: 2rem
+	li:last-child
+		padding-right: 0
+.container-header-nav_link
+	font-family: 'FuturaRegular'
+	font-size: 1.1rem
+	color: #585450
+	&:hover
+		@include color-brown-hover
+.container-header-nav_link.active
+	@include color-brown
+.out
+	width: 100%
+	z-index: 100
+.container-main-thumbs
+	width: 1180px
+	position: relative
+	overflow: hidden
+	margin: 0 auto
+.container-main-thumbs_parallax-text
+	position: relative
+	opacity: 1
+.container-main-thumbs_parallax-text_title
+	padding-top: 31vh
+.container-main-thumbs_parallax-text_description
+	padding-left: 33.5%
+	margin-top: -25px
+.container-parallax-img
+	width: 100%
+	top: 0
+	left: 0
+	height: 100vh
+	position: fixed
+	transform: translateZ(0)
+	opacity: 1
+	//z-index: 100
+.container-parallax-img_bg
+	width: 100%
+	bottom: 0
+	position: absolute
+	left: 0
+.container-main-thumbs-t
+	position: relative
+	overflow: hidden
+	width: 100%
+	z-index: 50
+	padding-top: 5rem
+.container-main-thumbs-t_parallax
+	width: 1180px
+	opacity: 0
+	margin: 0 auto
+.container-main-thumbs-t_parallax_title
+	padding-left: 33.5%
+	position: relative
+	padding-bottom: 3.3rem
+	&:after
+		content: ""
+		position: absolute
+		width: 70px
+		height: 3px
+		background: #d9b189
+		bottom: 0
+		left: 33.5%
+.container-main-thumbs-t_brief-information
+	width: 100%
+	font-size: 0
+	padding-top: 3.75rem
+	margin-bottom: 6.125rem
+.container-main-thumbs-t_row-8
+	width: 69%
+	@include display-inline-top
+	.container-main-thumbs-t_title
+		padding-left: 48%
+		padding-right: 10%
+		padding-bottom: 5.725rem
+	.container-main-thumbs-t_image-title
+        padding-left: 6.5rem
+        font-family: 'FuturaRegular'
+        font-size: 1.25rem
+        color: #75706b
+        font-style: italic
+	.container-main-thumbs-t_image-product
+		margin-bottom: 2rem
+		img
+			width: 90%
+.container-main-thumbs-t_row-4
+    width: 31%
+    padding-right: 6rem
+    @include display-inline-top
+    .container-main-thumbs-t_title-1
+        margin-bottom: 1.3rem
+    .container-main-thumbs-t_title-2
+        margin-bottom: 2rem
+    .container-main-thumbs-t_logo-comp
+        margin-bottom: 4.5rem
+        li
+            display: inline-block
+            vertical-align: middle
+            width: 46px
+            margin-right: 2rem
+        .logo-comp-img
+            width: 100%
+.container-companions
+.container-companions_txt
+	padding-left: 34%
+	padding-right: 23%
+	margin-bottom: 5.5rem
+.container-companions_logo-comp
+	width: 100%
+	text-align: center
+	font-size: 0
+	padding-left: 17%
+	margin-bottom: 4.375rem
+	.container-companions_logo-comp_list
+		text-align: center
+		width: 20%
+		@include display-inline-middle
+		.container-companions_logo-comp_img
+			width: 64%
+.container-design-home-bg
+    background: #75706b
+    opacity: 0
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+.container-design-home
+    position: relative
+    width: 100%
+    padding-bottom: 150px
+.container-design-home
+	.link
+		display: inline-block
+		margin-bottom: 70px
+.container-design-home-list
+	width: 1580px
+	padding-top: 600px
+	margin: 0 auto
+.container-design-home-list_box
+    font-size: 0
+    margin-top: -35px
+    .container-design-home_work
+        display: inline-block
+        vertical-align: top
+        position: relative
+        height: 510px
+        width: 50%
+        .container-design-home_work-img
+            width: 536px
+            height: 370px
+            text-align: center
+            position: absolute
+            img
+                height: 100%
+    .container-design-home_work:first-child .container-design-home_work-img
+        bottom: 0
+        left: 0
+    .container-design-home_work:last-child .container-design-home_work-img
+        top: 0
+        right: 0
+        img
+            margin: 0 auto
+
+.container-design-home-list
+    .container-design-home-list_box:nth-child(2n)
+        .container-design-home_work:first-child .container-design-home_work-img
+        bottom: 0
+        left: 0
+        img
+            margin: 0 auto
+    .container-design-home_work:last-child .container-design-home_work-img
+        top: 0
+        right: 0
+.container-design-home-list
+    .container-design-home-list_box:first-child
+        margin-top: 0
+.container-design-home-sidebar
+	position: absolute
+	width: 400px
+	margin-left: -200px
+	left: 50%
+	text-align: center
+	padding-top: 225px
+	padding-bottom: 100px
+	z-index: 3
+	transition: all .8s ease-out
+	transform: translateZ(0)
+	-webkit-transform: translateZ(0)
+.container-design-home-sidebar_title
+	line-height: 1.2
+	margin-bottom: 35px
+.container-design-home-sidebar_line
+	width: 70px
+	height: 4px
+	margin: 0 auto
+	background-color: #d9b189
+.fixed
+	position: fixed
+	z-index: 9999
+	top: 0
+.container-design-home-sidebar_p
+	padding-top: 3.4rem
+	padding-bottom: 1.3rem
+.container-home-work_content
+	@include container-content
+	padding-left: 105px
+	padding-top: 120px
+.container-home-work_content-title
+	position: relative
+	padding-bottom: 60px
+	margin-bottom: 60px
+.container-home-work_content-title:after
+	content: ''
+	position: absolute
+	width: 70px
+	height: 4px
+	background-color: #d9b189
+	bottom: 0
+	left: 0
+.container-home-work_content-list
+	width: 100%
+	.container-home-work_content-list_box
+		display: inline-block
+		vertical-align: top
+		width: 300px
+		min-height: 170px
+		padding-bottom: 20px
+		margin-right: 100px
+		&:nth-child(3n+3)
+			width: 260px
+			margin: 0
+		.content-list_box-icon
+			position: relative
+			width: 100%
+			height: 60px
+			margin-bottom: 20px
+			img
+				width: 17%
+				position: absolute
+				left: 0
+				bottom: 0
+		.content-list_box-txt
+			font-family: 'FuturaBook'
+			font-size: 24px
+			text-transform: uppercase
+.container-home-news_title
+	@include container-content
+	padding-top: 120px
+	.container-home-news_title-txt
+		position: relative
+		padding-bottom: 55px
+		padding-left: 33.5%
+	.container-home-news_title-txt:after
+		content: ''
+		position: absolute
+		width: 70px
+		height: 4px
+		background-color: #d9b189
+		bottom: 0
+		left: 33.5%
+.container-news_content
+	width: 100%
+.container-news_content-box
+	width: 1325px
+	margin: 0 auto
+	font-size: 0
+.container-news_content-box .container-news_content-list:nth-child(2n+1)
+	width: 56%
+	.container-link-news
+		display: block
+		margin-top: 110px
+		margin-left: 175px
+		position: relative
+		.container-link-news_img
+			left: 0
+			top: 0
+		.container-link-news_content
+			padding-left: 170px
+			padding-top: 200px
+.container-news_content-box .container-news_content-list:nth-child(2n)
+	width: 44%
+	.container-link-news
+		display: block
+		margin-left: 30px
+		position: relative
+		.container-link-news_img
+			left: 0
+			top: 0
+		.container-link-news_content
+			padding-left: 165px
+			padding-top: 200px
+.container-news_content-list
+	@include display-inline-top
+	height: 505px
+	position: relative
+	.container-link-news
+		transition: all .3s ease-out
+		.container-link-news_img
+			width: 375px
+			height: 275px
+			position: absolute
+			display: block
+			&:before
+				content: ''
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				position: absolute
+				background-color: rgba(255, 255, 255, .5)
+				transition: background-color .3s ease-out
+			img
+				width: 100%
+		.container-link-news_content
+			position: relative
+			font-size: 0
+			.container-link-news_content_data
+				@include display-inline-top
+				font-family: 'FuturaBook'
+				font-size: 1rem
+				color: #dfd9d4
+				width: 130px
+			.container-link-news_content_txt
+				@include display-inline-top
+				width: 250px
+				.container-link-news_content-title
+					margin-bottom: 20px
+					transition: all .3s ease-out
+.container-link-news:hover
+	.container-link-news_img:before
+		background-color: rgba(255, 255, 255, 0)
+	.container-link-news_content-title
+		@include color-brown-hover
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 1700px)
+    .container-main-thumbs_parallax-text_title
+        padding-top: 22vh
+@media all and (max-width: 1600px)
+	.container-design-home-list
+		width: 100%
+@media all and (max-width: 1500px)
+	.container-header-parallax
+		padding-left: 23%
+@media all and (max-width: 1350px)
+	.container-news_content-box
+		width: 100%
+	.container-design-home-list_box .container-design-home_work .container-design-home_work-img
+		width: 385px
+		height: 265px
+@media all and (max-width: 1200px)
+	.company-header-logo
+		padding-left: 1%
+	.anchor-feedback-header
+		padding-right: 1%
+	.container-contact-header
+		margin-left: 7%
+	.container-header-nav
+		padding-left: 7%
+	.container-main-thumbs, .container-main-thumbs-t_parallax, .container-home-work_content, .container-home-news_title, .container-news_content-box
+		width: 100%
+	.container-companions_logo-comp
+		padding-left: 8%
+	.container-news_content-box .container-news_content-list:nth-child(odd) .container-link-news, .container-news_content-box .container-news_content-list:nth-child(2n) .container-link-news
+		margin-left: 0
+	.container-news_content-box .container-news_content-list:nth-child(odd) .container-link-news .container-link-news_content, .container-news_content-box .container-news_content-list:nth-child(2n) .container-link-news .container-link-news_content
+		padding-left: 45px
+	.container-home-work_content-list .container-home-work_content-list_box, .container-home-work_content-list .container-home-work_content-list_box:nth-child(3n+3)
+		width: 49%
+		margin-right: 0
+	.container-home-work_content-list .container-home-work_content-list_box .content-list_box-txt
+		padding-right: 30px
+	.container-design-home-sidebar
+		width: 300px
+		margin-left: -150px
+	.container-design-home-sidebar_title
+		font-size: 2rem
+	.container-design-home-sidebar_p
+		font-size: 1.1rem
+	.container-design-home-list_box .container-design-home_work .container-design-home_work-img
+		width: 330px
+		height: 225px
