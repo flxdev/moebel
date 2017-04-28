@@ -1,0 +1,29 @@
+.footer
+    width: 100%
+    background-color: #c9db75
+    padding-top: 150px
+.container-footer
+    @include container-content
+.container-footer-contact-us
+    font-size: 0
+.container-footer-contact-us-info
+    @include display-inline-top
+    width: 24%
+.contact-us-info_title
+    color: white
+    position: relative
+    padding-bottom: 45px
+    &:after
+        content: ""
+        position: absolute
+        width: 70px
+        height: 4px
+        background-color: white
+        left: 0
+        bottom: 0
+.contact-us-info_txt-q
+    font-family: FuturaBook
+    font-size: 1.25rem
+    color: white
+    letter-spacing: -1px
+    line-height: 1.4

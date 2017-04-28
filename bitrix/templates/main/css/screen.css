@@ -684,6 +684,43 @@ p {
 .container-link-news:hover .container-link-news_content-title {
   color: #c6a079; }
 
+.footer {
+  width: 100%;
+  background-color: #c9db75;
+  padding-top: 150px; }
+
+.container-footer {
+  width: 1180px;
+  margin: 0 auto; }
+
+.container-footer-contact-us {
+  font-size: 0; }
+
+.container-footer-contact-us-info {
+  display: inline-block;
+  vertical-align: top;
+  width: 24%; }
+
+.contact-us-info_title {
+  color: white;
+  position: relative;
+  padding-bottom: 45px; }
+  .contact-us-info_title:after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 4px;
+    background-color: white;
+    left: 0;
+    bottom: 0; }
+
+.contact-us-info_txt-q {
+  font-family: FuturaBook;
+  font-size: 1.25rem;
+  color: white;
+  letter-spacing: -1px;
+  line-height: 1.4; }
+
 .btn {
   font-family: 'FuturaRegular';
   font-size: 16px;
@@ -726,6 +763,9 @@ p {
     width: 385px;
     height: 265px; } }
   @media all and (max-width: 1200px) {
+
+  h1 {
+    font-size: 4rem; }
 
   .company-header-logo {
     padding-left: 1%; }
