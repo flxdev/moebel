@@ -172,6 +172,8 @@ p {
   position: relative;
   line-height: 1.6;
   display: inherit;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   color: #d9b189; }
   .link:after {
     content: '';
@@ -704,7 +706,8 @@ p {
 .contact-us-info_title {
   color: white;
   position: relative;
-  padding-bottom: 45px; }
+  padding-bottom: 45px;
+  margin-bottom: 40px; }
   .contact-us-info_title:after {
     content: "";
     position: absolute;
@@ -719,7 +722,45 @@ p {
   font-size: 1.25rem;
   color: white;
   letter-spacing: -1px;
-  line-height: 1.4; }
+  line-height: 1.4;
+  margin-bottom: 30px; }
+
+.contact-us-info_tel {
+  font-family: FuturaRegular;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px; }
+
+.contact-us-info_email {
+  font-family: FuturaBook;
+  font-size: 1.25rem;
+  color: white;
+  letter-spacing: -1px;
+  position: relative;
+  line-height: 1.6;
+  display: inherit;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+  .contact-us-info_email:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+
+.contact-us-info_email:hover {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  color: #95a259; }
+  .contact-us-info_email:hover:after {
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    height: 0; }
 
 .btn {
   font-family: 'FuturaRegular';
