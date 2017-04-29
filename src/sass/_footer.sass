@@ -6,9 +6,46 @@
     @include container-content
 .container-footer-contact-us
     font-size: 0
+    padding-bottom: 95px
 .container-footer-contact-us-info
     @include display-inline-top
-    width: 24%
+    width: 35%
+    padding-right: 11%
+.container-footer-contact-us-form
+    @include display-inline-top
+    width: 65%
+    padding-right: 10%
+    position: relative
+    .input-box
+        width: 100%
+        margin-bottom: 33px
+        font-family: FuturaBook
+        font-size: 1.25rem
+        color: #75706b
+        padding: 34px 20px 12px 20px
+        position: relative
+        z-index: 510
+        transition: all 0.3s ease
+        box-shadow: 1px 4px 17px -8px #000000
+    .form-label .input-label
+        position: absolute
+        z-index: 520
+        margin-top: 25px
+        color: #75706b
+        transition: all 0.3s ease
+        left: 20px
+        font-family: FuturaBook
+        font-size: 1.25rem
+        pointer-events: none
+    .form-label .label-focus
+        margin-top: 13px
+        font-size: 0.9rem
+        color: #ada7a1
+    .textarea-box
+        border: none
+        resize: none
+        height: 103px
+
 .contact-us-info_title
     color: white
     position: relative
@@ -59,3 +96,19 @@
     &:after
         transition: all .3s ease-in-out
         height: 0
+.box-addfile-btn
+    width: 100%
+    font-size: 0
+.box-add-file
+    @include display-inline-top
+    width: 50%
+.box-btn-send
+    @include display-inline-top
+    width: 50%
+    .btn-gray
+        float: right
+.btn-gray
+    color: white
+    background-color: #75706b
+    &:hover
+        background-color: #57534e

@@ -697,12 +697,53 @@ p {
   margin: 0 auto; }
 
 .container-footer-contact-us {
-  font-size: 0; }
+  font-size: 0;
+  padding-bottom: 95px; }
 
 .container-footer-contact-us-info {
   display: inline-block;
   vertical-align: top;
-  width: 24%; }
+  width: 35%;
+  padding-right: 11%; }
+
+.container-footer-contact-us-form {
+  display: inline-block;
+  vertical-align: top;
+  width: 65%;
+  padding-right: 10%;
+  position: relative; }
+  .container-footer-contact-us-form .input-box {
+    width: 100%;
+    margin-bottom: 33px;
+    font-family: FuturaBook;
+    font-size: 1.25rem;
+    color: #75706b;
+    padding: 34px 20px 12px 20px;
+    position: relative;
+    z-index: 510;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-box-shadow: 1px 4px 17px -8px #000000;
+    box-shadow: 1px 4px 17px -8px #000000; }
+  .container-footer-contact-us-form .form-label .input-label {
+    position: absolute;
+    z-index: 520;
+    margin-top: 25px;
+    color: #75706b;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    left: 20px;
+    font-family: FuturaBook;
+    font-size: 1.25rem;
+    pointer-events: none; }
+  .container-footer-contact-us-form .form-label .label-focus {
+    margin-top: 13px;
+    font-size: 0.9rem;
+    color: #ada7a1; }
+  .container-footer-contact-us-form .textarea-box {
+    border: none;
+    resize: none;
+    height: 103px; }
 
 .contact-us-info_title {
   color: white;
@@ -762,6 +803,28 @@ p {
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     height: 0; }
+
+.box-addfile-btn {
+  width: 100%;
+  font-size: 0; }
+
+.box-add-file {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%; }
+
+.box-btn-send {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%; }
+  .box-btn-send .btn-gray {
+    float: right; }
+
+.btn-gray {
+  color: white;
+  background-color: #75706b; }
+  .btn-gray:hover {
+    background-color: #57534e; }
 
 .btn {
   font-family: 'FuturaRegular';

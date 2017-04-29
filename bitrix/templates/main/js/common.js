@@ -7,6 +7,23 @@ function simpleParallax() {
     $('.container-main-thumbs-t_parallax').css({"opacity":0 +(scrolled * 0.005)});
 }
 
+function focusInput() {
+    var inputFocus = $('.input-box');
+    var inputLabel = $('.input-label');
+
+    $(inputFocus).on('focus', function () {
+        $(this).parents().closest('.box-input').find('.form-label').find(inputLabel).addClass('label-focus');
+    });
+
+    $(inputFocus).on('focusout', function () {
+        if (this != null && this.value.length == 0){
+            $(this).parents().closest('.box-input').find('.form-label').find(inputLabel).removeClass('label-focus');
+        }else {
+            $(this).parents().closest('.box-input').find('.form-label').find(inputLabel).addClass('label-focus');
+        }
+    });
+}
+
 var scrollBlockBg = $('.container-design-home-bg'), display;
 var scrollHeight = $('.container-main-thumbs').height() + $('.container-main-thumbs-t').height()-200;
 
@@ -29,3 +46,5 @@ $(function(){
         else {$('.container-design-home-sidebar').removeClass('fixed');}
     });
 });
+
+focusInput();
