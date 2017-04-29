@@ -326,7 +326,8 @@ p {
   width: 1180px;
   position: relative;
   overflow: hidden;
-  margin: 0 auto; }
+  margin: 0 auto;
+  z-index: 3; }
 
 .container-main-thumbs_parallax-text {
   position: relative;
