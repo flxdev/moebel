@@ -16,6 +16,8 @@
     width: 65%
     padding-right: 10%
     position: relative
+    .box-input
+        position: relative
     .input-box
         width: 100%
         margin-bottom: 33px
@@ -33,14 +35,18 @@
         margin-top: 25px
         color: #75706b
         transition: all 0.3s ease
-        left: 20px
+        padding-left: 20px
         font-family: FuturaBook
         font-size: 1.25rem
         pointer-events: none
+        width: 100%
     .form-label .label-focus
-        margin-top: 13px
+        padding-top: 13px
+        margin-top: 0
         font-size: 0.9rem
         color: #ada7a1
+        background-color: white
+        padding-bottom: 8px
     .textarea-box
         border: none
         resize: none
@@ -112,3 +118,72 @@
     background-color: #75706b
     &:hover
         background-color: #57534e
+.container-footer-menu
+    width: 100%
+    font-size: 0
+    position: relative
+    .container-footer-menu_img-block
+        width: 35%
+        @include display-inline-top
+        position: relative
+    .container-footer-menu_nav
+        width: 65%
+        @include display-inline-top
+        padding-top: 107px
+.containerimg-footer-menu_img-block-scroll
+    position: absolute
+    width: 350px
+    top: 0
+    left: -150px
+    img
+        width: 100%
+.container-footer-menu_nav-list
+    margin-bottom: 160px
+    li
+        margin-bottom: 30px
+        a
+            font-family: FuturaMedium
+            font-size: 48px
+            color: white
+            transition: all .3s ease-out
+            &:hover
+                color: #95a259
+        .active
+            color: #95a259
+.container-footer-dev
+    width: 100%
+    position: relative
+    margin-bottom: 130px
+    .container-footer-dev_txt
+        font-family: FuturaBook
+        font-size: 1.25rem
+        color: white
+    .container-footer-dev_link
+        font-family: FuturaBook
+        font-size: 1.25rem
+        color: white
+        position: absolute
+        top: 0
+        right: 0
+        a
+            color: white
+            border-bottom: 1px solid white
+            padding-bottom: 5px
+            transition: all .3s ease-out
+            &:hover
+                color: #95a259
+                border-bottom: transparent
+.container-footer-scroll-top
+    width: 100%
+    position: relative
+    margin-bottom: 60px
+    .btn-scroll-top
+        width: 75px
+        height: 75px
+        background-image: url("../img/btn-scroll-top.png")
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: top center
+        cursor: pointer
+        &:hover
+            background-position: bottom center

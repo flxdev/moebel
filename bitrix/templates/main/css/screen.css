@@ -311,7 +311,9 @@ p {
 .container-header-nav_link {
   font-family: 'FuturaRegular';
   font-size: 1.1rem;
-  color: #585450; }
+  color: #585450;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
   .container-header-nav_link:hover {
     color: #c6a079; }
 
@@ -712,6 +714,8 @@ p {
   width: 65%;
   padding-right: 10%;
   position: relative; }
+  .container-footer-contact-us-form .box-input {
+    position: relative; }
   .container-footer-contact-us-form .input-box {
     width: 100%;
     margin-bottom: 33px;
@@ -732,14 +736,18 @@ p {
     color: #75706b;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    left: 20px;
+    padding-left: 20px;
     font-family: FuturaBook;
     font-size: 1.25rem;
-    pointer-events: none; }
+    pointer-events: none;
+    width: 100%; }
   .container-footer-contact-us-form .form-label .label-focus {
-    margin-top: 13px;
+    padding-top: 13px;
+    margin-top: 0;
     font-size: 0.9rem;
-    color: #ada7a1; }
+    color: #ada7a1;
+    background-color: white;
+    padding-bottom: 8px; }
   .container-footer-contact-us-form .textarea-box {
     border: none;
     resize: none;
@@ -826,6 +834,84 @@ p {
   .btn-gray:hover {
     background-color: #57534e; }
 
+.container-footer-menu {
+  width: 100%;
+  font-size: 0;
+  position: relative; }
+  .container-footer-menu .container-footer-menu_img-block {
+    width: 35%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative; }
+  .container-footer-menu .container-footer-menu_nav {
+    width: 65%;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 107px; }
+
+.containerimg-footer-menu_img-block-scroll {
+  position: absolute;
+  width: 350px;
+  top: 0;
+  left: -150px; }
+  .containerimg-footer-menu_img-block-scroll img {
+    width: 100%; }
+
+.container-footer-menu_nav-list {
+  margin-bottom: 160px; }
+  .container-footer-menu_nav-list li {
+    margin-bottom: 30px; }
+    .container-footer-menu_nav-list li a {
+      font-family: FuturaMedium;
+      font-size: 48px;
+      color: white;
+      -webkit-transition: all .3s ease-out;
+      transition: all .3s ease-out; }
+      .container-footer-menu_nav-list li a:hover {
+        color: #95a259; }
+    .container-footer-menu_nav-list li .active {
+      color: #95a259; }
+
+.container-footer-dev {
+  width: 100%;
+  position: relative;
+  margin-bottom: 130px; }
+  .container-footer-dev .container-footer-dev_txt {
+    font-family: FuturaBook;
+    font-size: 1.25rem;
+    color: white; }
+  .container-footer-dev .container-footer-dev_link {
+    font-family: FuturaBook;
+    font-size: 1.25rem;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .container-footer-dev .container-footer-dev_link a {
+      color: white;
+      border-bottom: 1px solid white;
+      padding-bottom: 5px;
+      -webkit-transition: all .3s ease-out;
+      transition: all .3s ease-out; }
+      .container-footer-dev .container-footer-dev_link a:hover {
+        color: #95a259;
+        border-bottom: transparent; }
+
+.container-footer-scroll-top {
+  width: 100%;
+  position: relative;
+  margin-bottom: 60px; }
+  .container-footer-scroll-top .btn-scroll-top {
+    width: 75px;
+    height: 75px;
+    background-image: url("../img/btn-scroll-top.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    cursor: pointer; }
+    .container-footer-scroll-top .btn-scroll-top:hover {
+      background-position: bottom center; }
+
 .btn {
   font-family: 'FuturaRegular';
   font-size: 16px;
@@ -853,8 +939,11 @@ p {
     padding-top: 22vh; } }
   @media all and (max-width: 1600px) {
 
-  .container-design-home-list {
-    width: 100%; } }
+  .container-design-home-list, .container-footer {
+    width: 100%; }
+
+  .containerimg-footer-menu_img-block-scroll {
+    left: 0; } }
   @media all and (max-width: 1500px) {
 
   .container-header-parallax {

@@ -58,5 +58,17 @@ function scrollForm() {
     });
 }
 
+function autoTextarea() {
+    $('textarea').autosize();
+}
+
+function scrollUp() {
+    $('.btn-scroll-top').click(function () {
+        $('body,html').animate({scrollTop:0},800);
+    })
+}
+
+scrollUp();
+autoTextarea();
 focusInput();
 scrollForm();
