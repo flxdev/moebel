@@ -48,6 +48,7 @@ h3
 	font-size: 1.5rem
 	color: #585450
 	text-transform: uppercase
+	letter-spacing: 1px
 h4
     font-family: 'FuturaMedium'
     color: #585450
@@ -58,7 +59,6 @@ h5
     font-size: 1.25rem
     line-height: 1.5
     color: #75706b
-    letter-spacing: -1px
 p
 	font-family: 'FuturaBook'
 	font-size: 1.25rem
@@ -137,7 +137,7 @@ p
 	span
 		padding: 0 5px
 .container-language-selection_link
-	font-family: 'FuturaRegular'
+	font-family: 'FuturaBook'
 	font-size: 1rem
 	color: #585450
 	&:hover
@@ -150,7 +150,7 @@ p
 	margin-left: 13%
 	transition: all .3s ease-out
 .container-contact-header_label
-	font-family: 'FuturaRegular'
+	font-family: 'FuturaBook'
 	font-size: 1.1rem
 	color: #75706b
 	@include rem(padding-bottom, 0.9)
@@ -160,15 +160,19 @@ p
 	color: #585450
 	@include rem(padding-bottom, 0.3)
 .container-contact-header_email
-	font-family: 'FuturaRegular'
+	font-family: 'FuturaBook'
 	font-size: 1.1rem
 	@include color-brown
-	text-decoration: underline
+	text-decoration: none
+	border-bottom: 1px solid #d9b189
+	transition: all .3s ease-out
 	&:hover
 		@include color-brown-hover
 		text-decoration: none
+		border-bottom: transparent
+
 .container-header-nav
-	padding-left: 11%
+	padding-left: 10%
 	line-height: 1
 	@include display-inline-top
 	li
@@ -177,7 +181,7 @@ p
 	li:last-child
 		padding-right: 0
 .container-header-nav_link
-	font-family: 'FuturaRegular'
+	font-family: 'FuturaMedium'
 	font-size: 1.1rem
 	color: #585450
 	transition: all .3s ease-out
@@ -200,8 +204,9 @@ p
 .container-main-thumbs_parallax-text_title
 	padding-top: 31vh
 .container-main-thumbs_parallax-text_description
-	padding-left: 33.5%
+	padding-left: 35%
 	margin-top: -25px
+	letter-spacing: 1px
 .container-parallax-img
 	width: 100%
 	top: 0
@@ -221,7 +226,7 @@ p
 	overflow: hidden
 	width: 100%
 	z-index: 50
-	padding-top: 5rem
+	padding-top: 2.7rem
 .container-main-thumbs-t_parallax
 	width: 1180px
 	opacity: 0
@@ -309,7 +314,7 @@ p
 .container-design-home
 	.link
 		display: inline-block
-		margin-bottom: 70px
+		margin-bottom: 65px
 .container-design-home-list
 	width: 1580px
 	padding-top: 600px
@@ -354,8 +359,8 @@ p
         margin-top: 0
 .container-design-home-sidebar
 	position: absolute
-	width: 400px
-	margin-left: -200px
+	width: 350px
+	margin-left: -175px
 	left: 50%
 	text-align: center
 	padding-top: 225px
@@ -421,6 +426,8 @@ p
 			font-family: 'FuturaBook'
 			font-size: 24px
 			text-transform: uppercase
+			color: #75706b
+			letter-spacing: 1.5px
 .container-home-news_title
 	@include container-content
 	padding-top: 120px
@@ -504,6 +511,7 @@ p
 				.container-link-news_content-title
 					margin-bottom: 20px
 					transition: all .3s ease-out
+					font-size: 1.4rem
 .container-link-news:hover
 	.container-link-news_img:before
 		background-color: rgba(255, 255, 255, 0)

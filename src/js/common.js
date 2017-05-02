@@ -1,10 +1,10 @@
 //Parallax
 function simpleParallax() {
     var scrolled = $(window).scrollTop() + 1;
-    $('.container-header-parallax').css({"transform": "translate3d(0px, " +-(scrolled * 1.2)+"px, 0px)"});
-    $('.container-main-thumbs_parallax-text').css({"transform": "translate3d(0px, " +-(scrolled * 2)+"px, 0px)","opacity":1 -(scrolled * 0.01)});
+    $('.header-parallax').css({"transform": "translate3d(0px, " +-(scrolled * 0.8)+"px, 0px)"});
+    $('.container-main-thumbs_parallax-text').css({"transform": "translate3d(0px, " +-(scrolled * 0.7)+"px, 0px)","opacity":1 -(scrolled * 0.0085)});
     $('.container-parallax-img').css({"transform": "translate3d(0px, " + +(scrolled * 8)+"px, 0px)", "opacity":1 -(scrolled * 0.07)});
-    $('.container-main-thumbs-t_parallax').css({"opacity":0 +(scrolled * 0.005)});
+    $('.container-main-thumbs-t_parallax').css({"transform": "translate3d(0px, " + -(scrolled * 0.1)+"px, 0px)","opacity":0 +(scrolled * 0.01)});
 }
 
 function focusInput() {
