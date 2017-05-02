@@ -689,6 +689,86 @@ p {
 .container-link-news:hover .container-link-news_content-title {
   color: #c6a079; }
 
+.container-map-site {
+  width: 100%;
+  position: relative;
+  padding-top: 230px;
+  width: 1180px;
+  margin: 0 auto; }
+  .container-map-site a {
+    font-family: FuturaBook;
+    font-size: 1.25rem; }
+
+.container-map {
+  padding-top: 230px;
+  padding-bottom: 70px;
+  position: relative; }
+
+.container-map-contant {
+  width: 1180px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  z-index: 1; }
+
+.block-map {
+  position: relative; }
+
+.container-map-contant_bread-crumbs {
+  margin-bottom: 65px;
+  font-family: FuturaBook;
+  font-size: 1rem;
+  color: #585450; }
+
+.container-map-contant_block-map {
+  position: relative;
+  height: 800px; }
+
+.container-map-contant_block-map_contact {
+  width: 400px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.block-map_contact-title {
+  margin-bottom: 45px; }
+
+.block-map_contact-adress {
+  font-family: FuturaBook;
+  font-size: 1.1rem;
+  color: #585450;
+  line-height: 1.7;
+  margin-bottom: 27px; }
+
+.block-map_contact-tel {
+  font-family: 'FuturaMedium';
+  font-size: 40px;
+  color: #585450;
+  margin-bottom: 25px; }
+
+.block-map_contact-anchor {
+  font-family: FuturaBook;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #d9b189;
+  color: #d9b189;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  margin-bottom: 85px;
+  display: inline-block; }
+  .block-map_contact-anchor:hover {
+    color: #c6a079;
+    border-bottom: transparent; }
+
+.container-map-green-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32%;
+  height: 100%;
+  background-color: rgba(240, 247, 207, 0.5);
+  z-index: 10; }
+
 .footer {
   width: 100%;
   background-color: #c9db75;
@@ -937,9 +1017,13 @@ p {
 
   .container-main-thumbs_parallax-text_title {
     padding-top: 22vh; } }
-  @media all and (max-width: 1600px) {
+  @media all and (max-width: 1599px) {
 
-  .container-design-home-list, .container-footer {
+  .container-footer, .container-map-contant, .container-map-site {
+    width: 100%;
+    padding: 0 60px; }
+
+  .container-design-home-list {
     width: 100%; }
 
   .containerimg-footer-menu_img-block-scroll {

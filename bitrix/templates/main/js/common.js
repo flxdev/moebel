@@ -35,8 +35,14 @@ $(window).scroll(function (e) {
 
 });
 
-$(function(){
-    var topPos = $('.container-design-home-sidebar').offset().top;
+function fixDesign() {
+    var topPosid = $('.container-design-home-sidebar');
+
+    if (!topPosid.length){
+        return
+    }
+
+    var topPos = topPosid.offset().top;
     $(window).scroll(function() {
         var top = $(document).scrollTop(),
             pip = $('.container-home-work').offset().top,
@@ -45,10 +51,10 @@ $(function(){
         else if (top > pip - height) {$('.container-design-home-sidebar').removeClass('fixed').css({'position':'absolute','bottom':'0'});}
         else {$('.container-design-home-sidebar').removeClass('fixed');}
     });
-});
+}
 
 function scrollForm() {
-    $("a.anchor-feedback-header_link").click(function() {
+    $("a.anchor-touch").click(function() {
         var elementClick = $(this).attr("href")
         var destination = $(elementClick).offset().top;
         jQuery("html:not(:animated),body:not(:animated)").animate({
@@ -68,7 +74,10 @@ function scrollUp() {
     })
 }
 
+
+fixDesign();
 scrollUp();
 autoTextarea();
 focusInput();
 scrollForm();
+
