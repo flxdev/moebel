@@ -74,6 +74,66 @@ function scrollUp() {
     })
 }
 
+//Parallax
+if ($('.parallax').length) {
+    Parallax($('.parallax'));
+}
+
+function Parallax($parallaxes) {
+    $(window).on('scroll', function () {
+        var scrollTop = $(window).scrollTop(),
+            bSH = $('body').scrollHeight,
+            $prlx, $wrapper, wrapperRect, wrapperOffset, wrapperMargin,
+            speed, direction, y, scrollHeight, scrollPosition, axis,
+            data = {}, topBorder;
+        $parallaxes.each(function () {
+            data = {};
+            $prlx = $(this);
+            axis = $prlx.data('axis') || 'y',
+                topBorder = 0,
+                bottomBorder = 0;
+
+            if (!$prlx.length) {
+                return false;
+            }
+
+            if ($prlx.closest('.js-parallax-wrapper').length) {
+                $wrapper = $prlx.closest('.js-parallax-wrapper');
+            } else {
+                $wrapper = $prlx.parent();
+            }
+
+            wrapperRect = $wrapper[0].getBoundingClientRect();
+            speed = parseInt($prlx.data('speed'), 10) / 109 || 0.20;
+            direction = parseInt($prlx.data('direction'), 10) || 1;
+            wrapperOffset = $wrapper.offset().top;
+
+            wrapperMargin = ($(window).height() - wrapperRect.height + 850) / 2;
+
+            if (0 > wrapperMargin && (scrollTop + wrapperRect.top) <= topBorder) {
+                wrapperMargin = 0;
+            }
+
+            y = Math.round((wrapperRect.top - wrapperMargin) * speed) * direction;
+
+            if (scrollTop === 0) {
+                y = 0;
+            } else {
+                scrollHeight = bSH;
+                scrollPosition = $(window).height() + scrollTop;
+                if (
+                    scrollHeight - wrapperOffset - $wrapper.innerHeight() <= 2 &&
+                    (scrollHeight - scrollPosition) / scrollHeight === 0
+                ) {
+                    y = 0;
+                }
+            }
+            data[axis] = y;
+            TweenLite.to($prlx, 1, data);
+        });
+    });
+};
+
 
 fixDesign();
 scrollUp();
