@@ -5,3 +5,5 @@
 
 //=include lib/TweenLite.min.js
 //=include lib/CSSPlugin.min.js
+
+//=include lib/stickyfill.min.js
