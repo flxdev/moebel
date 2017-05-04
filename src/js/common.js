@@ -40,7 +40,7 @@ $(window).scroll(function (e) {
         $('.icon-logo .fill').css('fill', '#75706b');
         $('.icon-mail .feedback-fill-circle').css('fill', '#75706b');
     }   else {
-        $('.icon-logo .fill').css('fill', '#C8904E');
+        $('.icon-logo .fill').css('fill', '#d9b189');
         $('.icon-mail .feedback-fill-circle').css('fill', '#c9db75');
     }
 });

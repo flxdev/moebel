@@ -31,12 +31,15 @@
 .revealator-slideleft,
 .revealator-slideright,
 .revealator-slidedown,
-.revealator-zoomin,
 .revealator-zoomout,
 .revealator-rotateleft,
 .revealator-rotateright {
 /* Default effect duration */
   transition: all 600ms;
+}
+
+.revealator-zoomin{
+  transition: all 300ms;
 }
 /* Fade effect */
 .revealator-fade {

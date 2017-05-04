@@ -3,7 +3,8 @@ function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
             center: coordinates,
             zoom: 15,
-            disableDefaultUI: true,
+            disableDefaultUI: false,
+            scrollwheel: false,
             styles: [
                 {
                     "featureType": "water",
