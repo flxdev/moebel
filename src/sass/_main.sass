@@ -125,12 +125,19 @@ p
 .container-header-parallax
 	margin: 0 auto
 	@include rem(padding-top, 3.7)
-	padding-left: 38.5%
+	//padding-left: 38.5%
 	position: fixed
 	width: 100%
 	z-index: 50
 	transform: translate3d(0px, 0, 0px)
 	transition: all .3s ease-out
+.block-header
+    @include container-content
+    position: relative
+.header-parallax
+    position: absolute
+    left: 34.5%
+    width: 85%
 .container-language-selection
 	color: #585450
 	@include display-inline-top
@@ -205,7 +212,7 @@ p
 .container-main-thumbs_parallax-text_title
 	padding-top: 25vh
 .container-main-thumbs_parallax-text_description
-	padding-left: 35%
+	padding-left: 34.5%
 	margin-top: -25px
 	letter-spacing: 1px
 .container-parallax-img
@@ -233,7 +240,7 @@ p
 	opacity: 0
 	margin: 0 auto
 .container-main-thumbs-t_parallax_title
-	padding-left: 33.5%
+	padding-left: 34.5%
 	position: relative
 	padding-bottom: 3.3rem
 	&:after
@@ -243,7 +250,7 @@ p
 		height: 3px
 		background: #d9b189
 		bottom: 0
-		left: 33.5%
+		left: 34.5%
 .container-main-thumbs-t_brief-information
 	width: 100%
 	font-size: 0
@@ -253,7 +260,7 @@ p
 	width: 69%
 	@include display-inline-top
 	.container-main-thumbs-t_title
-		padding-left: 48%
+		padding-left: 50%
 		padding-right: 10%
 		padding-bottom: 5.725rem
 	.container-main-thumbs-t_image-title
@@ -285,9 +292,9 @@ p
             width: 100%
 .container-companions
 .container-companions_txt
-	padding-left: 34%
+	padding-left: 34.5%
 	padding-right: 23%
-	margin-bottom: 0
+	margin-bottom: 50px
 .container-companions_logo-comp
 	width: 100%
 	text-align: center
@@ -453,7 +460,7 @@ p
 	.container-home-news_title-txt
 		position: relative
 		padding-bottom: 55px
-		padding-left: 33.5%
+		padding-left: 34.2%
 	.container-home-news_title-txt:after
 		content: ''
 		position: absolute
@@ -461,7 +468,7 @@ p
 		height: 4px
 		background-color: #d9b189
 		bottom: 0
-		left: 33.5%
+		left: 34.5%
 .container-news_content
 	width: 100%
 .container-news_content-box
@@ -559,6 +566,16 @@ p
 		font-size: 1.25rem
 .parallax
 	will-change: transform
+.icon-logo .fill
+    fill: #C8904E
+    transition: fill .3s ease-in-out
+.icon-mail .feedback-fill-circle
+	fill: #c9db75
+	transition: fill .3s ease-in-out
+.icon-mail .feedback-fill-mail
+	fill: white
+	transition: fill .3s ease-in-out
+
 
 
 
