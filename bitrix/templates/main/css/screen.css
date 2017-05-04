@@ -341,7 +341,7 @@ p {
   opacity: 1; }
 
 .container-main-thumbs_parallax-text_title {
-  padding-top: 31vh; }
+  padding-top: 25vh; }
 
 .container-main-thumbs_parallax-text_description {
   padding-left: 35%;
@@ -1087,7 +1087,11 @@ p {
 
   * {
     -webkit-text-size-adjust: none; } }
-  @media all and (min-width: 1700px) {
+  @media all and (min-width: 1940px) {
+
+  .container-main-thumbs_parallax-text_title {
+    padding-top: 25vh; } }
+  @media all and (max-width: 1700px) {
 
   .container-main-thumbs_parallax-text_title {
     padding-top: 17vh; } }
@@ -1110,6 +1114,10 @@ p {
 
   .container-header-parallax {
     padding-left: 23%; } }
+  @media all and (max-width: 1460px) {
+
+  .container-main-thumbs_parallax-text_title {
+    padding-top: 27vh; } }
   @media all and (max-width: 1350px) {
 
   .container-news_content-box {
