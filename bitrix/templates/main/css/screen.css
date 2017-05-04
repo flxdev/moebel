@@ -459,8 +459,8 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   opacity: 0; }
 
 .container-design-home {
@@ -468,7 +468,7 @@ p {
   width: 100%;
   padding-bottom: 150px;
   padding-top: 250px;
-  margin-top: -150px; }
+  margin-top: -245px; }
 
 .container-design-home .link {
   display: inline-block;
@@ -813,7 +813,7 @@ p {
 .footer {
   width: 100%;
   background-color: #c9db75;
-  padding-top: 150px; }
+  padding-top: 190px; }
 
 .container-footer {
   width: 1180px;
@@ -821,13 +821,14 @@ p {
 
 .container-footer-contact-us {
   font-size: 0;
-  padding-bottom: 95px; }
+  padding-bottom: 25px; }
 
 .container-footer-contact-us-info {
   display: inline-block;
   vertical-align: top;
   width: 35%;
-  padding-right: 11%; }
+  padding-right: 11%;
+  padding-top: 50px; }
 
 .container-footer-contact-us-form {
   display: inline-block;
@@ -997,7 +998,7 @@ p {
 .container-footer-dev {
   width: 100%;
   position: relative;
-  margin-bottom: 130px; }
+  margin-bottom: 60px; }
   .container-footer-dev .container-footer-dev_txt {
     font-family: FuturaBook;
     font-size: 1.25rem;
@@ -1175,3 +1176,7 @@ p {
   .container-design-home-list_box .container-design-home_work .container-design-home_work-img {
     width: 330px;
     height: 225px; } }
+  @media all and (max-height: 830px) {
+
+  .container-parallax-img_bg {
+    bottom: -70px; } }

@@ -29,7 +29,7 @@ $(window).scroll(function (e) {
 
     var heightAddClass = $(this).scrollTop();
     var scrollHeight = $('.container-main-thumbs').height() + $('.container-main-thumbs-t').height();
-    var scrollHeight2 = $('.container-main-thumbs').height() + $('.container-main-thumbs-t').height() + $('.container-design-home').height() - 300;
+    var scrollHeight2 = $('.container-main-thumbs').height() + $('.container-main-thumbs-t').height() + $('.container-design-home').height() - 900;
     if (heightAddClass >= scrollHeight && heightAddClass < scrollHeight2) {
         $('.container-design-home-bg').css('opacity', '1');
     } else {
