@@ -71,22 +71,20 @@ p
 	position: relative
 	line-height: 1.6
 	display: inherit
-	transition: all .3s ease-in-out
+	transition: all .4s ease-in-out
 	@include color-brown
 	&:after
-		content: ''
-		position: absolute
-		width: 100%
+		display: block
+		content: ""
 		height: 1px
+		width: 100%
 		background-color: #d9b189
-		bottom: 0
-		left: 0
+		transition: width .4s ease-in-out
+		margin-top: 0
+	&:hover:after, &:focus:after
+		width: 0%
 .link:hover
-    transition: all .3s ease-in-out
     @include color-brown-hover
-    &:after
-        transition: all .3s ease-in-out
-        height: 0
 .container-home-work, .container-home-news
 	@include container
 .container-home-news
@@ -173,12 +171,21 @@ p
 	font-size: 1.1rem
 	@include color-brown
 	text-decoration: none
-	border-bottom: 1px solid #d9b189
-	transition: all .3s ease-out
+	transition: all .3s ease-in-out
+	display: inline-block
+	&:after
+		display: block
+		content: ""
+		height: 1px
+		width: 100%
+		background-color: #d9b189
+		transition: width .4s ease-in-out
+		margin-top: 2px
 	&:hover
 		@include color-brown-hover
 		text-decoration: none
-		border-bottom: transparent
+	&:hover:after, &:focus:after
+		width: 0%
 
 .container-header-nav
 	padding-left: 10%
@@ -460,9 +467,18 @@ p
 	@include container-content
 	padding-top: 120px
 	.container-home-news_title-txt
+		font-family: FuturaBook
+		font-size: 3.125rem
 		position: relative
 		padding-bottom: 55px
 		padding-left: 34.2%
+		color: #d9b189
+		text-transform: uppercase
+		line-height: 1.1
+		display: block
+		transition: width .3s ease-in-out
+		&:hover
+			@include color-brown-hover
 	.container-home-news_title-txt:after
 		content: ''
 		position: absolute
@@ -471,6 +487,10 @@ p
 		background-color: #d9b189
 		bottom: 0
 		left: 34.5%
+		transition: width .3s ease-in-out
+	.container-home-news_title-txt:hover:after, .container-home-news_title-txt:focus:after
+		width: 0%
+
 .container-news_content
 	width: 100%
 .container-news_content-box
@@ -577,6 +597,9 @@ p
 .icon-mail .feedback-fill-mail
 	fill: white
 	transition: fill .3s ease-in-out
+.container-contact-header_tel .link-tel
+	display: block
+	color: #585450
 
 
 

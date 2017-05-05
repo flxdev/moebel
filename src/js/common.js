@@ -30,6 +30,7 @@ $(window).scroll(function (e) {
     var heightAddClass = $(this).scrollTop();
     var scrollHeight = $('.container-main-thumbs').height() + $('.container-main-thumbs-t').height();
     var scrollHeight2 = $('.container-main-thumbs').height() + $('.container-main-thumbs-t').height() + $('.container-design-home').height() - 900;
+    var scrollHeight3 = $('.out').height() + $('.footer').height() - 890;
     var out = $('.out').height()-60;
     if (heightAddClass >= scrollHeight && heightAddClass < scrollHeight2) {
         $('.container-design-home-bg').css('opacity', '1');
@@ -42,6 +43,11 @@ $(window).scroll(function (e) {
     }   else {
         $('.icon-logo .fill').css('fill', '#d9b189');
         $('.icon-mail .feedback-fill-circle').css('fill', '#c9db75');
+    }
+    if (heightAddClass >= scrollHeight3){
+        $('.box-scroll').addClass('show-scroll-top');
+    } else {
+        $('.box-scroll').removeClass('show-scroll-top');
     }
 });
 

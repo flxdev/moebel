@@ -11,7 +11,7 @@
 .container-footer-contact-us-info
     @include display-inline-top
     width: 34.5%
-    padding-right: 11%
+    padding-right: 10%
     padding-top: 50px
 .container-footer-contact-us-form
     @include display-inline-top
@@ -30,7 +30,7 @@
         position: relative
         z-index: 510
         transition: all 0.3s ease
-        box-shadow: 1px 4px 17px -9.5px #000000
+        box-shadow: 1px 4px 17px -12px #000000
     .form-label .input-label
         position: absolute
         z-index: 520
@@ -69,9 +69,9 @@
         bottom: 0
 .contact-us-info_txt-q
     font-family: FuturaBook
-    font-size: 1.25rem
+    font-size: 1.2rem
     color: white
-    letter-spacing: -1px
+    letter-spacing: 0.3px
     line-height: 1.4
     margin-bottom: 30px
 .contact-us-info_tel
@@ -80,24 +80,29 @@
     font-weight: bold
     color: white
     margin-bottom: 20px
+    .link-tel
+        display: block
+        color: white
 .contact-us-info_email
     font-family: FuturaBook
-    font-size: 1.25rem
+    font-size: 1.2rem
     color: white
-    letter-spacing: -1px
+    letter-spacing: 0.5px
     position: relative
     line-height: 1.6
-    display: inherit
+    text-decoration: none
     transition: all .3s ease-in-out
+    display: inline-block
     &:after
-        content: ''
-        position: absolute
-        width: 100%
+        display: block
+        content: ""
         height: 1px
+        width: 100%
         background-color: white
-        bottom: 0
-        left: 0
-        transition: all .3s ease-in-out
+        transition: width .4s ease-in-out
+        margin-top: 0px
+    &:hover:after, &:focus:after
+        width: 0%
 .contact-us-info_email:hover
     transition: all .3s ease-in-out
     color: #95a259
@@ -156,7 +161,7 @@
 .container-footer-dev
     width: 100%
     position: relative
-    margin-bottom: 60px
+    margin-bottom: 30px
     .container-footer-dev_txt
         font-family: FuturaBook
         font-size: 1.25rem
@@ -168,18 +173,34 @@
         position: absolute
         top: 0
         right: -21%
-        a
-            color: white
-            border-bottom: 1px solid white
-            padding-bottom: 5px
-            transition: all .3s ease-out
-            &:hover
+        cursor: pointer
+        &:hover
+            span:after, span:after
+                width: 0%
+            span
                 color: #95a259
-                border-bottom: transparent
+        span
+            color: white
+            padding-bottom: 5px
+            transition: all .4s ease-out
+            display: inline-block
+            &:after
+                display: block
+                content: ""
+                height: 1px
+                width: 100%
+                background-color: white
+                transition: width .4s ease-in-out
+                margin-top: 0
 .container-footer-scroll-top
     width: 100%
     position: relative
     margin-bottom: 60px
+    height: 75px
+    .box-scroll
+        transition: all .6s ease-in-out
+        margin-top: 150px
+        display: inline-block
     .btn-scroll-top
         width: 75px
         height: 75px
@@ -190,3 +211,5 @@
         cursor: pointer
         &:hover
             background-position: bottom center
+    .box-scroll.show-scroll-top
+        margin-top: 0
