@@ -60,10 +60,11 @@
           <div class="container-wrapper-contant_bread-crumbs">Home  −  Contacts</div>
           <div class="block-map">
             <div class="container-map-contant_block-map" id="map"></div>
-            <div class="container-map-contant_block-map_contact parallax" data-speed="20">
-              <h1 class="block-map_contact-title">contacts</h1>
-              <div class="block-map_contact-adress">Latvijas Republika, Riga, <br> Tvaika iela 35, LV-1034</div>
-              <div class="block-map_contact-tel">+371 6 616 55 07</div><a class="anchor-touch block-map_contact-anchor" href="#containerForm">Get in touch</a>
+            <div class="container-map-contant_block-map_contact">
+              <div class="parallax" data-speed="9">
+                <h1 class="block-map_contact-title">contacts</h1>
+                <div class="block-map_contact-adress">Latvijas Republika, Riga, <br> Tvaika iela 35, LV-1034</div><a class="block-map_contact-tel link-tel" href="tel:+371 6 616 55 07">+371 6 616 55 07</a><a class="anchor-touch block-map_contact-anchor" href="#containerForm">Get in touch</a>
+              </div>
             </div>
           </div>
         </div>
@@ -118,7 +119,12 @@
               </div>
               <div class="box-addfile-btn">
                 <div class="box-addfile-btn_container">
-                  <div class="box-add-file"></div>
+                  <div class="box-add-file">
+                    <!--form.dropzone
+                    .fallback
+                        input(name='file' type="file" multiple)
+                    -->
+                  </div>
                   <div class="box-btn-send">
                     <button class="btn">
                       <div class="btn-scale btn-gray"></div>

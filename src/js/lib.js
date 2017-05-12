@@ -11,3 +11,5 @@
 //=include lib/fm.revealator.jquery.min.js
 
 //=include lib/swiper.min.js
+
+//=include lib/dropzone.js

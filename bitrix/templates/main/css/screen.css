@@ -78,7 +78,6 @@ table {
  */
 .revealator-fade,
 .revealator-slideup,
-.revealator-slideleft,
 .revealator-slideright,
 .revealator-slidedown,
 .revealator-zoomout,
@@ -89,8 +88,12 @@ table {
   transition: all 600ms; }
 
 .revealator-zoomin {
-  -webkit-transition: all 300ms;
-  transition: all 300ms; }
+  -webkit-transition: all 450ms;
+  transition: all 450ms; }
+
+.revealator-slideleft {
+  -webkit-transition: all 450ms;
+  transition: all 450ms; }
 
 /* Fade effect */
 .revealator-fade {
@@ -1882,8 +1885,10 @@ p {
   width: 400px;
   background-color: white;
   position: absolute;
-  top: 50px;
+  top: 0;
   left: 0; }
+  .container-map-contant_block-map_contact .parallax {
+    margin-top: 80px; }
 
 .block-map_contact-title {
   margin-bottom: 45px; }
@@ -2027,10 +2032,32 @@ p {
 .container-wrapper-about_video-img {
   padding-left: 25px;
   margin-bottom: 50px; }
-  .container-wrapper-about_video-img .wrapper-about_video-img {
-    width: 100%; }
-    .container-wrapper-about_video-img .wrapper-about_video-img img {
-      width: 100%; }
+  .container-wrapper-about_video-img .wrapper-about_img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 5;
+    opacity: 1;
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease; }
+    .container-wrapper-about_video-img .wrapper-about_img img {
+      width: 100%;
+      height: 100%; }
+  .container-wrapper-about_video-img .wrapper-about_video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .container-wrapper-about_video-img .wrapper-about_video .video {
+      position: absolute;
+      top: 0;
+      width: auto;
+      height: 100%;
+      left: 50%;
+      -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+      transform: translate(-50%); }
 
 .container-stages-production-content {
   padding-top: 50px;
@@ -2061,22 +2088,33 @@ p {
   width: 40%;
   padding-top: 200px;
   padding-bottom: 100px; }
+  .wrapper-stages-production_content-image .sticky {
+    padding-top: 50px; }
 
 .wrapper-stages-production_content-txt {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  padding-left: 42%; }
+  padding-left: 42%;
+  padding-bottom: 350px; }
 
 .container-stages-production-img {
   position: static; }
+  .container-stages-production-img .box-slider-img {
+    opacity: 0;
+    -webkit-transition: all .7s ease-out;
+    transition: all .7s ease-out;
+    position: fixed;
+    bottom: 0;
+    width: 39%;
+    left: -50%; }
 
 .wrapper-stages-production_content-image {
   position: absolute;
   height: 100%; }
   .wrapper-stages-production_content-image .box-img {
     position: relative;
-    margin-bottom: 40px; }
+    margin-bottom: 0; }
     .wrapper-stages-production_content-image .box-img img {
       width: 100%; }
   .wrapper-stages-production_content-image .box-img_title {
@@ -2098,7 +2136,9 @@ p {
   color: #c9db75;
   opacity: .25;
   width: 117px;
-  line-height: 0.7; }
+  line-height: 0.7;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; }
 
 .wrapper-stages-production_list-number-title .wrapper-stages-production_list_title {
   display: inline-block;
@@ -2169,7 +2209,7 @@ p {
   overflow: hidden;
   position: relative; }
   .swiper-slider-about-gallery .swiper-button-prev {
-    width: 15%;
+    width: 50%;
     left: 0;
     top: 0;
     margin-top: 0;
@@ -2177,7 +2217,7 @@ p {
     cursor: url(../img/manufacture/slider-prev.png), pointer;
     background-image: none; }
   .swiper-slider-about-gallery .swiper-button-next {
-    width: 15%;
+    width: 50%;
     right: 0;
     top: 0;
     margin-top: 0;
@@ -2189,8 +2229,8 @@ p {
     margin-bottom: 30px; }
     .swiper-slider-about-gallery .swiper-slide-img img {
       width: 100%;
-      -webkit-transition: all .6s ease-in-out;
-      transition: all .6s ease-in-out; }
+      -webkit-transition: all .6s ease-out;
+      transition: all .6s ease-out; }
   .swiper-slider-about-gallery .swiper-pagination {
     font-family: 'FuturaMedium';
     font-size: 3rem;
@@ -2253,6 +2293,21 @@ p {
   bottom: -170px; }
   .container-wrapper-our-mission_img img {
     width: 100%; }
+
+.display-none {
+  display: none !important; }
+
+.greenOpacity {
+  opacity: 1 !important; }
+
+.display-block {
+  display: block !important; }
+
+.wrapper-about_video-img-box {
+  width: 100%;
+  height: 365px;
+  position: relative;
+  overflow: hidden; }
 
 .footer {
   width: 100%;

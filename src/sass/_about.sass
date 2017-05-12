@@ -86,10 +86,31 @@
 .container-wrapper-about_video-img
     padding-left: 25px
     margin-bottom: 50px
-    .wrapper-about_video-img
+    .wrapper-about_img
         width: 100%
+        height: 100%
+        position: relative
+        z-index: 5
+        opacity: 1
+        transition: opacity .5s ease
         img
             width: 100%
+            height: 100%
+    .wrapper-about_video
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        .video
+            position: absolute
+            top: 0
+            width: auto
+            height: 100%
+            left: 50%
+            -webkit-transform: translate(-50%)
+            -ms-transform: translate(-50%)
+            transform: translate(-50%)
 .container-stages-production-content
     padding-top: 50px
     overflow: inherit
@@ -116,18 +137,28 @@
     width: 40%
     padding-top: 200px
     padding-bottom: 100px
+    .sticky
+        padding-top: 50px
 .wrapper-stages-production_content-txt
     @include display-inline-top
     position: relative
     padding-left: 42%
+    padding-bottom: 350px
 .container-stages-production-img
     position: static
+    .box-slider-img
+        opacity: 0
+        transition: all .7s ease-out
+        position: fixed
+        bottom: 0
+        width: 39%
+        left: -50%
 .wrapper-stages-production_content-image
     position: absolute
     height: 100%
     .box-img
         position: relative
-        margin-bottom: 40px
+        margin-bottom: 0
         img
             width: 100%
     .box-img_title
@@ -148,6 +179,7 @@
         opacity: .25
         width: 117px
         line-height: 0.7
+        transition: all .5s ease-in-out
     .wrapper-stages-production_list_title
         @include display-inline-middle
         font-family: FuturaMedium
@@ -210,7 +242,7 @@
     position: relative
     .swiper-slide
     .swiper-button-prev
-        width: 15%
+        width: 50%
         left: 0
         top: 0
         margin-top: 0
@@ -218,7 +250,7 @@
         cursor: url(../img/manufacture/slider-prev.png), pointer
         background-image: none
     .swiper-button-next
-        width: 15%
+        width: 50%
         right: 0
         top: 0
         margin-top: 0
@@ -230,7 +262,7 @@
         margin-bottom: 30px
         img
             width: 100%
-            transition: all .6s ease-in-out
+            transition: all .6s ease-out
     .swiper-pagination
         font-family: 'FuturaMedium'
         font-size: 3rem
@@ -291,3 +323,14 @@
     bottom: -170px
     img
         width: 100%
+.display-none
+    display: none !important
+.greenOpacity
+    opacity: 1 !important
+.display-block
+    display: block !important
+.wrapper-about_video-img-box
+    width: 100%
+    height: 365px
+    position: relative
+    overflow: hidden
