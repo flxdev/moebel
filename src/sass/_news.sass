@@ -1,0 +1,82 @@
+.container-wrapper-link-menu
+    font-size: 0
+    padding-left: 33.8%
+    position: relative
+    margin-top: 41px
+.container-wrapper-link-menu_list
+    @include display-inline-top
+    width: 200px
+    padding: 0 15px
+    .box-link-menu_list
+        margin-bottom: 28px
+    .link-menu_list.active
+        font-family: 'FuturaMedium'
+        font-size: 1.125rem
+        text-transform: uppercase
+        letter-spacing: 1.1px
+    .link-menu_list
+        font-family: 'FuturaBook'
+        font-size: 1.125rem
+        color: #75706b
+        &:hover
+            @include color-brown-hover
+.container-wrapper-news-big
+    width: 1180px
+    position: relative
+    margin: 0 auto
+    padding-top: 80px
+    padding-bottom: 65px
+.container-wrapper-news-big_link
+    display: block
+    font-size: 0
+    transition: all .3s ease-out
+.wrapper-news-big_link-img
+    @include display-inline-middle
+    position: relative
+    width: 34.5%
+    .big-img
+        margin-left: -80px
+        width: 92%
+        &:before
+            content: ''
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            position: absolute
+            opacity: 0.5
+            background-color: white
+            transition: all 0.6s ease-in-out
+        img
+            width: 100%
+            -webkit-transition: all 0.6s ease
+            -moz-transition: all 0.6s ease
+            transition: all 0.6s ease
+            -webkit-filter: opacity(50%)
+.wrapper-news-big_link-description
+    width: 73%
+    margin-right: -100px
+    @include display-inline-middle
+    .wrapper-news-big_link-description-date
+        font-family: 'FuturaBook'
+        color: #dedede
+        font-size: 1rem
+        margin-bottom: 25px
+    .wrapper-news-big_link-description-text
+        font-family: FuturaBook
+        color: #585450
+        font-size: 3.125rem
+        text-transform: uppercase
+        transition: all .3s ease-out
+.container-wrapper-news-big_link:hover
+    .big-img:before
+        opacity: 0
+    .big-img img
+        -moz-transform: scale(1.1)
+        -webkit-transform: scale(1.1)
+        -o-transform: scale(1.1)
+        -ms-transform: scale(1.1)
+        transform: scale(1.1)
+        -webkit-filter: opacity(100%)
+    .wrapper-news-big_link-description-text
+        @include color-brown-hover
