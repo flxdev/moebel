@@ -1974,7 +1974,7 @@ p {
   position: relative;
   width: 100%;
   height: 100%;
-  padding-bottom: 100px; }
+  padding-bottom: 30px; }
 
 .container-wrapper-what-did-list {
   width: 100%;
@@ -2095,8 +2095,7 @@ p {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  padding-left: 42%;
-  padding-bottom: 350px; }
+  padding-left: 42%; }
 
 .container-stages-production-img {
   position: static; }
@@ -2159,7 +2158,10 @@ p {
 .container-wrapper-best {
   width: 1180px;
   margin: 0 auto;
-  padding-top: 90px; }
+  padding-top: 50px;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease; }
   .container-wrapper-best .wrapper-title {
     position: relative;
     padding-bottom: 43px;

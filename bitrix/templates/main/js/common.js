@@ -80,9 +80,21 @@ function initFixSliderAbout() {
     Revealator.effects_padding = '-220';
 }
 
+function initOpacityBest() {
+    var heightOpacity = $(this).scrollTop();
+    var scrollHeightOpacity = $('.container-wrapper-contant').height() + $('.container-wrapper-what-did').height() + $('.container-wrapper-about').height() + $('.container-wrapper-stages-production').height()-100;
+
+    if(heightOpacity >= scrollHeightOpacity){
+        $('.container-wrapper-best').css('opacity', '1');
+    } else {
+        $('.container-wrapper-best').css('opacity', '0');
+    }
+}
+
 $(window).scroll(function (e) {
     simpleParallax();
     initFixSliderAbout();
+    initOpacityBest();
 
     var heightAddClass = $(this).scrollTop();
     var scrollHeight = $('.container-main-thumbs').height() + $('.container-main-thumbs-t').height();
