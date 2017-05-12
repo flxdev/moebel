@@ -1267,7 +1267,7 @@ p {
   position: fixed;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
-  padding-top: 2.75rem;
+  padding-top: 2.45rem;
   float: left;
   left: 0;
   z-index: 50; }
@@ -1281,7 +1281,7 @@ p {
 .anchor-feedback-header {
   padding-right: 4%;
   position: fixed;
-  padding-top: 2.75rem;
+  padding-top: 2.2rem;
   float: right;
   right: 0;
   z-index: 55;
@@ -1857,6 +1857,128 @@ p {
   font-family: FuturaBook;
   font-size: 1rem;
   color: #585450; }
+
+.container-overflow {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(117, 112, 107, 0.7);
+  z-index: 100;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .6s ease-out;
+  transition: all .6s ease-out; }
+
+.container-overflow.overflow-open {
+  display: block; }
+
+.container-popup-news {
+  width: 1088px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  z-index: 100; }
+
+.container-wrapper-popup-news {
+  position: relative;
+  padding: 240px 100px 50px 100px; }
+
+.brn-close-popup {
+  position: absolute;
+  top: 55px;
+  right: 31px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer; }
+  .brn-close-popup img {
+    width: 100%; }
+
+.content-popup-news {
+  width: 100%;
+  position: relative; }
+  .content-popup-news .popup-news-data {
+    font-family: 'FuturaBook';
+    font-size: 1rem;
+    color: #595959;
+    opacity: .5;
+    margin-bottom: 45px; }
+  .content-popup-news .popup-news-title {
+    position: relative;
+    padding-bottom: 4.3rem; }
+    .content-popup-news .popup-news-title:after {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 3px;
+      background: #d9b189;
+      bottom: 0;
+      left: 0; }
+  .content-popup-news .container-next-news {
+    text-align: center;
+    margin-top: 30px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px; }
+    .content-popup-news .container-next-news .next-news-link {
+      font-family: 'FuturaBook';
+      font-size: 1.875rem;
+      color: #d9b189;
+      text-transform: uppercase;
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      position: relative; }
+
+.content-popup-news_img-txt {
+  font-size: 0;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  display: inline-block; }
+  .content-popup-news_img-txt .content-popup-news_img {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%; }
+    .content-popup-news_img-txt .content-popup-news_img img {
+      width: 100%; }
+  .content-popup-news_img-txt .content-popup-news_txt {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding-left: 40px; }
+    .content-popup-news_img-txt .content-popup-news_txt .content-popup-news_txt-title {
+      margin-bottom: 40px; }
+
+.wrapper-slider-news {
+  margin-top: 50px;
+  margin-bottom: 30px; }
+  .wrapper-slider-news .swiper-slider-news {
+    position: relative;
+    overflow: hidden; }
+    .wrapper-slider-news .swiper-slider-news .swiper-slide {
+      overflow: hidden; }
+      .wrapper-slider-news .swiper-slider-news .swiper-slide img {
+        width: 100%;
+        -webkit-transition: all .6s ease-out;
+        transition: all .6s ease-out; }
+    .wrapper-slider-news .swiper-slider-news .swiper-button-prev {
+      width: 50%;
+      left: 0;
+      top: 0;
+      margin-top: 0;
+      height: 100%;
+      cursor: url(../img/manufacture/slider-prev.png), pointer;
+      background-image: none; }
+    .wrapper-slider-news .swiper-slider-news .swiper-button-next {
+      width: 50%;
+      right: 0;
+      top: 0;
+      margin-top: 0;
+      height: 100%;
+      cursor: url(../img/manufacture/slider.png), pointer;
+      background-image: none; }
 
 .container-wrapper {
   padding-top: 230px;
@@ -2743,11 +2865,19 @@ p {
   @media all and (max-width: 1350px) {
 
   .container-news_content-box {
-    width: 100%; }
+    width: 100%;
+    padding: 0 30px; }
 
   .container-design-home-list_box .container-design-home_work .container-design-home_work-img {
     width: 385px;
-    height: 265px; } }
+    height: 265px; }
+
+  .wrapper-news-big_link-img .big-img {
+    margin-left: 0;
+    width: 92%; }
+
+  .wrapper-news-big_link-description {
+    width: 68%; } }
   @media all and (max-width: 1309px) {
 
   .container-stages-production-content, .container-wrapper-about, .container-wrapper-what-did {
@@ -2859,7 +2989,19 @@ p {
     position: absolute;
     right: auto;
     bottom: -170px;
-    left: 675px; } }
+    left: 675px; }
+
+  .container-stages-production-img .box-slider-img {
+    width: 33%; }
+
+  .container-wrapper-news-big {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px; }
+
+  .wrapper-news-big_link-description {
+    width: 65%;
+    margin-right: 0; } }
   @media all and (max-height: 830px) {
 
   .container-parallax-img_bg {
