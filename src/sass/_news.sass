@@ -18,6 +18,7 @@
         font-family: 'FuturaBook'
         font-size: 1.125rem
         color: #75706b
+        text-transform: uppercase
         &:hover
             @include color-brown-hover
 .container-wrapper-news-big
@@ -80,3 +81,23 @@
         -webkit-filter: opacity(100%)
     .wrapper-news-big_link-description-text
         @include color-brown-hover
+.container-btn-news
+    position: absolute
+    top: 24%
+    left: 0
+    width: 100%
+    .btn-prev-news
+        width: 18px
+        left: 40px
+        position: absolute
+        cursor: pointer
+        img
+            width: 100%
+    .btn-next-news
+        width: 18px
+        right: 40px
+        position: absolute
+        cursor: pointer
+        img
+            width: 100%
+

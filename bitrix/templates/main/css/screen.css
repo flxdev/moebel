@@ -1231,8 +1231,8 @@ p {
   position: relative;
   line-height: 1.6;
   display: inherit;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   color: #d9b189; }
   .link:after {
     display: block;
@@ -2454,7 +2454,8 @@ p {
   .container-wrapper-link-menu_list .link-menu_list {
     font-family: 'FuturaBook';
     font-size: 1.125rem;
-    color: #75706b; }
+    color: #75706b;
+    text-transform: uppercase; }
     .container-wrapper-link-menu_list .link-menu_list:hover {
       color: #c6a079; }
 
@@ -2525,6 +2526,93 @@ p {
 
 .container-wrapper-news-big_link:hover .wrapper-news-big_link-description-text {
   color: #c6a079; }
+
+.container-btn-news {
+  position: absolute;
+  top: 24%;
+  left: 0;
+  width: 100%; }
+  .container-btn-news .btn-prev-news {
+    width: 18px;
+    left: 40px;
+    position: absolute;
+    cursor: pointer; }
+    .container-btn-news .btn-prev-news img {
+      width: 100%; }
+  .container-btn-news .btn-next-news {
+    width: 18px;
+    right: 40px;
+    position: absolute;
+    cursor: pointer; }
+    .container-btn-news .btn-next-news img {
+      width: 100%; }
+
+.container-wrapper-portfolio_box {
+  width: 1388px;
+  font-size: 0;
+  margin: 0 auto;
+  height: 500px;
+  overflow: hidden; }
+
+.container-portfolio_txt {
+  top: 55%;
+  left: -69px; }
+
+.container-portfolio {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  position: relative;
+  padding: 0 0 0 0; }
+  .container-portfolio .container-portfolio_img-txt {
+    position: relative;
+    display: block; }
+    .container-portfolio .container-portfolio_img-txt:hover .container-portfolio_img {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1); }
+    .container-portfolio .container-portfolio_img-txt .container-portfolio_img {
+      width: 100%;
+      -webkit-transition: all 0.6s ease;
+      transition: all 0.6s ease; }
+    .container-portfolio .container-portfolio_img-txt .container-portfolio_txt {
+      position: absolute; }
+      .container-portfolio .container-portfolio_img-txt .container-portfolio_txt .container-portfolio_txt-prod {
+        font-family: 'FuturaBook';
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        color: #585450;
+        margin-bottom: 12px; }
+      .container-portfolio .container-portfolio_img-txt .container-portfolio_txt .container-portfolio_txt-link {
+        font-family: 'FuturaBook';
+        color: #585450;
+        font-size: 2.3rem;
+        display: inline-block;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out; }
+        .container-portfolio .container-portfolio_img-txt .container-portfolio_txt .container-portfolio_txt-link:after {
+          display: block;
+          content: "";
+          height: 1px;
+          width: 100%;
+          background-color: #585450;
+          -webkit-transition: width .3s ease-in-out;
+          transition: width .3s ease-in-out;
+          margin-top: 0; }
+  .container-portfolio .container-portfolio_img-txt:hover .container-portfolio_txt-link:after, .container-portfolio .container-portfolio_img-txt:focus .container-portfolio_txt-link:after {
+    width: 0%; }
+
+.container-wrapper-portfolio_box:nth-child(odd) .container-portfolio:first-child {
+  padding: 120px 70px 0 70px; }
+
+.container-wrapper-portfolio_box:nth-child(odd) .container-portfolio {
+  padding: 0 115px 0 205px; }
+
+.container-wrapper-portfolio_box:nth-child(even) .container-portfolio:first-child {
+  padding: 120px 145px 0 185px; }
+
+.container-wrapper-portfolio_box:nth-child(even) .container-portfolio {
+  padding: 0 0 0 130px; }
 
 .footer {
   width: 100%;
@@ -2852,16 +2940,23 @@ p {
 
   .container-footer-dev .container-footer-dev_link {
     right: 15%; } }
+  @media all and (max-width: 1500px) {
+
+  .container-contact-header {
+    margin-left: 12%; }
+
+  .container-header-nav {
+    padding-left: 9%; } }
   @media all and (max-width: 1460px) {
 
   .container-main-thumbs_parallax-text_title {
     padding-top: 27vh; }
 
   .container-contact-header {
-    margin-left: 5%; }
+    margin-left: 4%; }
 
   .container-header-nav {
-    padding-left: 6%; } }
+    padding-left: 5%; } }
   @media all and (max-width: 1350px) {
 
   .container-news_content-box {
@@ -3001,7 +3096,10 @@ p {
 
   .wrapper-news-big_link-description {
     width: 65%;
-    margin-right: 0; } }
+    margin-right: 0; }
+
+  .container-popup-news {
+    width: 900px; } }
   @media all and (max-height: 830px) {
 
   .container-parallax-img_bg {
