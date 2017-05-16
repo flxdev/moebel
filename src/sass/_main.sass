@@ -79,7 +79,7 @@ p
 		height: 1px
 		width: 100%
 		background-color: #d9b189
-		transition: width .4s ease-in-out
+		transition: width .3s ease-in-out
 		margin-top: 0
 	&:hover:after, &:focus:after
 		width: 0%
@@ -179,7 +179,7 @@ p
 		height: 1px
 		width: 100%
 		background-color: #d9b189
-		transition: width .4s ease-in-out
+		transition: width .3s ease-in-out
 		margin-top: 2px
 	&:hover
 		@include color-brown-hover
@@ -605,6 +605,10 @@ p
 	font-family: FuturaBook
 	font-size: 1rem
 	color: #585450
+.container-wrapper-contant_bread-crumbs a
+    color: #585450
+    &:hover
+        @include color-brown-hover
 .container-overflow
 	display: none
 	position: fixed
@@ -618,6 +622,8 @@ p
 .container-overflow.overflow-open
 	display: block
 .container-popup-news
+	height: 100%
+	overflow-y: auto
 	width: 1088px
 	background-color: white
 	position: absolute
@@ -725,6 +731,93 @@ p
 			height: 100%
 			cursor: url(../img/manufacture/slider.png),pointer
 			background-image: none
+.overflow-hidden
+    overflow: hidden
+.hidden
+	opacity: 0
+.visible
+	opacity: 1
+.inputfile
+	width: 0.1px
+	height: 0.1px
+	opacity: 0
+	overflow: hidden
+	position: absolute
+	z-index: -1
+.inputfile + label
+	color: white
+	display: inline-block
+	cursor: pointer
+	font-family: 'FuturaBook'
+	font-size: 20px
+.fallback label span
+	font-family: 'FuturaBook'
+	font-size: 20px
+.fallback .txt-btn-file
+    transition: all .3s ease-in-out
+    display: inline-block
+    &:after
+        display: block
+        content: ""
+        height: 2px
+        width: 100%
+        background-color: white
+        transition: width .3s ease-in-out
+        margin-top: 2px
+    &:hover
+        color: #95a259
+        text-decoration: none
+    &:hover:after, &:focus:after
+        width: 0%
+.box-file:hover .icon-add-file .fill-add-file
+    fill: #95a259
+.icon-add-file
+    width: 22px
+    height: 28px
+    display: inline-block
+    vertical-align: middle
+    margin-right: 10px
+    transition: all .3s ease-in-out
+    .fill-add-file
+        fill: white
+        transition: all .3s ease-in-out
+.container-wrapper-404_mouse
+	margin-bottom: 80px
+.container-wrapper-404
+	@include container-content
+.container-wrapper-404_txt
+	.container-wrapper-404_txt-sorry
+		font-family: 'FuturaBook'
+		font-size: 1.25rem
+		color: #75706b
+		text-align: center
+		margin-bottom: 10px
+	.container-wrapper-404_txt-link-home
+		text-align: center
+		a
+			font-family: 'FuturaBook'
+			font-size: 1.25rem
+			position: relative
+			@include color-brown
+			webkit-transition: all .3s ease-in-out
+			transition: all .3s ease-in-out
+			display: inline-block
+			&:after
+				display: block
+				content: ""
+				height: 1px
+				width: 100%
+				background-color: #d9b189
+				-webkit-transition: width .3s ease-in-out
+				transition: width .3s ease-in-out
+				margin-top: 2px
+				position: absolute
+				left: 0px
+				bottom: 0
+			&:hover
+				@include color-brown-hover
+			&:hover:after, &:focus:after
+				width: 0%
 
 
 

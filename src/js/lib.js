@@ -8,8 +8,10 @@
 
 //=include lib/stickyfill.min.js
 
-//=include lib/fm.revealator.jquery.min.js
+//=include lib/fm.revealator.jquery.js
 
 //=include lib/swiper.min.js
 
 //=include lib/dropzone.js
+
+//=include lib/viewportchecker.js

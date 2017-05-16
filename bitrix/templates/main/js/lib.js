@@ -332,9 +332,253 @@ g.setRatio=Qa,g.pr=-11,c=!0,g.b=o,k=$(a,e),l=a._gsClassPT){for(m={},n=l.data;n;)
 
 !function(a,b){function c(){y=D=z=A=B=C=K}function d(a,b){for(var c in b)b.hasOwnProperty(c)&&(a[c]=b[c])}function e(a){return parseFloat(a)||0}function f(){F={top:b.pageYOffset,left:b.pageXOffset}}function g(){return b.pageXOffset!=F.left?(f(),void z()):void(b.pageYOffset!=F.top&&(f(),i()))}function h(a){setTimeout(function(){b.pageYOffset!=F.top&&(F.top=b.pageYOffset,i())},0)}function i(){for(var a=H.length-1;a>=0;a--)j(H[a])}function j(a){if(a.inited){var b=F.top<=a.limit.start?0:F.top>=a.limit.end?2:1;a.mode!=b&&p(a,b)}}function k(){for(var a=H.length-1;a>=0;a--)if(H[a].inited){var b=Math.abs(t(H[a].clone)-H[a].docOffsetTop),c=Math.abs(H[a].parent.node.offsetHeight-H[a].parent.height);if(b>=2||c>=2)return!1}return!0}function l(a){isNaN(parseFloat(a.computed.top))||a.isCell||"none"==a.computed.display||(a.inited=!0,a.clone||q(a),"absolute"!=a.parent.computed.position&&"relative"!=a.parent.computed.position&&(a.parent.node.style.position="relative"),j(a),a.parent.height=a.parent.node.offsetHeight,a.docOffsetTop=t(a.clone))}function m(a){var b=!0;a.clone&&r(a),d(a.node.style,a.css);for(var c=H.length-1;c>=0;c--)if(H[c].node!==a.node&&H[c].parent.node===a.parent.node){b=!1;break}b&&(a.parent.node.style.position=a.parent.css.position),a.mode=-1}function n(){for(var a=H.length-1;a>=0;a--)l(H[a])}function o(){for(var a=H.length-1;a>=0;a--)m(H[a])}function p(a,b){var c=a.node.style;switch(b){case 0:c.position="absolute",c.left=a.offset.left+"px",c.right=a.offset.right+"px",c.top=a.offset.top+"px",c.bottom="auto",c.width="auto",c.marginLeft=0,c.marginRight=0,c.marginTop=0;break;case 1:c.position="fixed",c.left=a.box.left+"px",c.right=a.box.right+"px",c.top=a.css.top,c.bottom="auto",c.width="auto",c.marginLeft=0,c.marginRight=0,c.marginTop=0;break;case 2:c.position="absolute",c.left=a.offset.left+"px",c.right=a.offset.right+"px",c.top="auto",c.bottom=0,c.width="auto",c.marginLeft=0,c.marginRight=0}a.mode=b}function q(a){a.clone=document.createElement("div");var b=a.node.nextSibling||a.node,c=a.clone.style;c.height=a.height+"px",c.width=a.width+"px",c.marginTop=a.computed.marginTop,c.marginBottom=a.computed.marginBottom,c.marginLeft=a.computed.marginLeft,c.marginRight=a.computed.marginRight,c.padding=c.border=c.borderSpacing=0,c.fontSize="1em",c.position="static",c.cssFloat=a.computed.cssFloat,a.node.parentNode.insertBefore(a.clone,b)}function r(a){a.clone.parentNode.removeChild(a.clone),a.clone=void 0}function s(a){var b=getComputedStyle(a),c=a.parentNode,d=getComputedStyle(c),f=a.style.position;a.style.position="relative";var g={top:b.top,marginTop:b.marginTop,marginBottom:b.marginBottom,marginLeft:b.marginLeft,marginRight:b.marginRight,cssFloat:b.cssFloat,display:b.display},h={top:e(b.top),marginBottom:e(b.marginBottom),paddingLeft:e(b.paddingLeft),paddingRight:e(b.paddingRight),borderLeftWidth:e(b.borderLeftWidth),borderRightWidth:e(b.borderRightWidth)};a.style.position=f;var i={position:a.style.position,top:a.style.top,bottom:a.style.bottom,left:a.style.left,right:a.style.right,width:a.style.width,marginTop:a.style.marginTop,marginLeft:a.style.marginLeft,marginRight:a.style.marginRight},j=u(a),k=u(c),l={node:c,css:{position:c.style.position},computed:{position:d.position},numeric:{borderLeftWidth:e(d.borderLeftWidth),borderRightWidth:e(d.borderRightWidth),borderTopWidth:e(d.borderTopWidth),borderBottomWidth:e(d.borderBottomWidth)}},m={node:a,box:{left:j.win.left,right:J.clientWidth-j.win.right},offset:{top:j.win.top-k.win.top-l.numeric.borderTopWidth,left:j.win.left-k.win.left-l.numeric.borderLeftWidth,right:-j.win.right+k.win.right-l.numeric.borderRightWidth},css:i,isCell:"table-cell"==b.display,computed:g,numeric:h,width:j.win.right-j.win.left,height:j.win.bottom-j.win.top,mode:-1,inited:!1,parent:l,limit:{start:j.doc.top-h.top,end:k.doc.top+c.offsetHeight-l.numeric.borderBottomWidth-a.offsetHeight-h.top-h.marginBottom}};return m}function t(a){for(var b=0;a;)b+=a.offsetTop,a=a.offsetParent;return b}function u(a){var c=a.getBoundingClientRect();return{doc:{top:c.top+b.pageYOffset,left:c.left+b.pageXOffset},win:c}}function v(){G=setInterval(function(){!k()&&z()},500)}function w(){clearInterval(G)}function x(){I&&(document[L]?w():v())}function y(){I||(f(),n(),b.addEventListener("scroll",g),b.addEventListener("wheel",h),b.addEventListener("resize",z),b.addEventListener("orientationchange",z),a.addEventListener(M,x),v(),I=!0)}function z(){if(I){o();for(var a=H.length-1;a>=0;a--)H[a]=s(H[a].node);n()}}function A(){b.removeEventListener("scroll",g),b.removeEventListener("wheel",h),b.removeEventListener("resize",z),b.removeEventListener("orientationchange",z),a.removeEventListener(M,x),w(),I=!1}function B(){A(),o()}function C(){for(B();H.length;)H.pop()}function D(a){for(var b=H.length-1;b>=0;b--)if(H[b].node===a)return;var c=s(a);H.push(c),I?l(c):y()}function E(a){for(var b=H.length-1;b>=0;b--)H[b].node===a&&(m(H[b]),H.splice(b,1))}var F,G,H=[],I=!1,J=a.documentElement,K=function(){},L="hidden",M="visibilitychange";void 0!==a.webkitHidden&&(L="webkitHidden",M="webkitvisibilitychange"),b.getComputedStyle||c();for(var N=["","-webkit-","-moz-","-ms-"],O=document.createElement("div"),P=N.length-1;P>=0;P--){try{O.style.position=N[P]+"sticky"}catch(Q){}""!=O.style.position&&c()}f(),b.Stickyfill={stickies:H,add:D,remove:E,init:y,rebuild:z,pause:A,stop:B,kill:C}}(document,window),window.jQuery&&!function($){$.fn.Stickyfill=function(a){return this.each(function(){Stickyfill.add(this)}),this}}(window.jQuery);
 
-var Revealator="undefined"!=typeof Revealator?Revealator:{};$(function(){Revealator=$.extend({},{timer:null,busy:!1,scroll_padding:0,effects_padding:0,refresh:function(){}},"undefined"!=typeof Revealator?Revealator:{}),Revealator.refresh=function(){var a=$(window),e=$(document),o=$(document.body),t=0,l=Revealator.effects_padding,r=a.height()-Revealator.effects_padding,s=Revealator.scroll_padding,v=e.height()-Revealator.scroll_padding;0===a.scrollTop()?o.hasClass("at-top")||o.addClass("at-top").removeClass("at-bottom").removeClass("near-top").removeClass("near-bottom"):a.scrollTop()+a.height()===e.height()?o.hasClass("at-bottom")||o.addClass("at-bottom").removeClass("at-top").removeClass("near-top").removeClass("near-bottom"):a.scrollTop()<=s?o.hasClass("near-top")||o.addClass("near-top").removeClass("near-bottom").removeClass("at-top").removeClass("at-bottom"):a.scrollTop()+a.height()>=v?o.hasClass("near-bottom")||o.addClass("near-bottom").removeClass("near-top").removeClass("at-top").removeClass("at-bottom"):(o.hasClass("at-top")||o.hasClass("at-bottom")||o.hasClass("near-top")||o.hasClass("near-bottom"))&&o.removeClass("at-top").removeClass("at-bottom").removeClass("near-top").removeClass("near-bottom"),$('*[class*="revealator"]').each(function(){t++;var a=this,e=$(a),o=a.getBoundingClientRect(),s=void 0;s=o.top>r&&o.bottom>r?"revealator-below":o.top<r&&o.bottom>r?"revealator-partially-below":o.top<l&&o.bottom>l?"revealator-partially-above":o.top<l&&o.bottom<l?"revealator-above":"revealator-within",e.hasClass("revealator-load")&&!e.hasClass("revealator-within")&&(e.removeClass("revealator-below revealator-partially-below revealator-within revealator-partially-above revealator-above"),e.addClass("revealator-within")),e.hasClass(s)||e.hasClass("revealator-load")||(e.hasClass("revealator-once")?(e.hasClass("revealator-within")||(e.removeClass("revealator-below revealator-partially-below revealator-within revealator-partially-above revealator-above"),e.addClass(s)),(e.hasClass("revealator-partially-above")||e.hasClass("revealator-above"))&&e.addClass("revealator-within")):(e.removeClass("revealator-below revealator-partially-below revealator-within revealator-partially-above revealator-above"),e.addClass(s)))})},$(window).bind("scroll resize load ready",function(){Revealator.busy||(Revealator.busy=!0,setTimeout(function(){Revealator.busy=!1,Revealator.refresh()},150))})});
+/*
 
-//# sourceMappingURL=fm.revealator.jquery.min.map
+ Revealator jQuery Plugin
+
+ Revealator is a jQuery-based plugin for adding effects to elements that enter the window. It's simple, and easy to use.
+
+ version 1.4, Jan 11th, 2016
+
+ by Ingi P. Jacobsen
+
+
+
+ The MIT License (MIT)
+
+
+
+ Copyright (c) 2016 Faroe Media
+
+
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+
+ of this software and associated documentation files (the "Software"), to deal
+
+ in the Software without restriction, including without limitation the rights
+
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+
+ copies of the Software, and to permit persons to whom the Software is
+
+ furnished to do so, subject to the following conditions:
+
+
+
+ The above copyright notice and this permission notice shall be included in all
+
+ copies or substantial portions of the Software.
+
+
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+
+ SOFTWARE.
+
+ */
+
+
+
+
+
+var Revealator = typeof Revealator !== 'undefined' ? Revealator : {};
+
+
+
+$(function () {
+
+	Revealator = $.extend({}, {
+
+		timer:           null,
+
+		busy:            false,
+
+		scroll_padding:  0,
+
+		effects_padding: 0,
+
+		refresh:         function () {}
+
+	}, typeof Revealator !== 'undefined' ? Revealator : {});
+
+
+
+	Revealator.refresh = function () {
+
+		var $window = $(window);
+
+		var $document = $(document);
+
+		var $body = $(document.body);
+
+		var i = 0;
+
+		var window_top = Revealator.effects_padding;
+
+		var window_bottom = $window.height() - Revealator.effects_padding;
+
+		var document_top = Revealator.scroll_padding;
+
+		var document_bottom = $document.height() - Revealator.scroll_padding;
+
+
+
+		if ($window.scrollTop() === 0) {
+
+			if (!$body.hasClass('at-top')) {
+
+				$body.addClass('at-top').removeClass('at-bottom').removeClass('near-top').removeClass('near-bottom');
+
+			}
+
+		} else if ($window.scrollTop() + $window.height() === $document.height()) {
+
+			if (!$body.hasClass('at-bottom')) {
+
+				$body.addClass('at-bottom').removeClass('at-top').removeClass('near-top').removeClass('near-bottom');
+
+			}
+
+		} else if ($window.scrollTop() <= document_top) {
+
+			if (!$body.hasClass('near-top')) {
+
+				$body.addClass('near-top').removeClass('near-bottom').removeClass('at-top').removeClass('at-bottom');
+
+			}
+
+		} else if ($window.scrollTop() + $window.height() >= document_bottom) {
+
+			if (!$body.hasClass('near-bottom')) {
+
+				$body.addClass('near-bottom').removeClass('near-top').removeClass('at-top').removeClass('at-bottom');
+
+			}
+
+		} else {
+
+			if ($body.hasClass('at-top') || $body.hasClass('at-bottom') || $body.hasClass('near-top') || $body.hasClass('near-bottom')) {
+
+				$body.removeClass('at-top').removeClass('at-bottom').removeClass('near-top').removeClass('near-bottom');
+
+			}
+
+		}
+
+		
+
+		$('*[class*="revealator"]').each(function () {
+
+			i++;
+
+			var element = this;
+
+			var $element = $(element);
+
+			var element_bounding = element.getBoundingClientRect();
+
+
+
+			var position_class = undefined;
+
+			if (element_bounding.top > window_bottom && element_bounding.bottom > window_bottom) {
+
+				position_class = 'revealator-below';
+
+			} else if (element_bounding.top < window_bottom && element_bounding.bottom > window_bottom) {
+
+				position_class = 'revealator-partially-below'
+
+			} else if (element_bounding.top < window_top && element_bounding.bottom > window_top) {
+
+				position_class = 'revealator-partially-above'
+
+			} else if (element_bounding.top < window_top && element_bounding.bottom < window_top) {
+
+				position_class = 'revealator-above';
+
+			} else {
+
+				position_class = 'revealator-within';
+
+			}
+
+
+
+			if ($element.hasClass('revealator-load') && !$element.hasClass('revealator-within')) {
+
+				$element.removeClass('revealator-below revealator-partially-below revealator-within revealator-partially-above revealator-above');
+
+				$element.addClass('revealator-within');
+
+			}
+
+
+
+			if (!$element.hasClass(position_class) && !$element.hasClass('revealator-load')) {
+
+				if ($element.hasClass('revealator-once')) {
+
+					if (!$element.hasClass('revealator-within')) {
+
+						$element.removeClass('revealator-below revealator-partially-below revealator-within revealator-partially-above revealator-above');
+
+						$element.addClass(position_class);
+
+					}
+
+					if ($element.hasClass('revealator-partially-above') || $element.hasClass('revealator-above')) {
+
+						$element.addClass('revealator-within');
+
+					}
+
+				} else {
+
+					$element.removeClass('revealator-below revealator-partially-below revealator-within revealator-partially-above revealator-above');
+
+					$element.addClass(position_class);
+
+				}
+
+			}
+
+		});
+
+	};
+
+
+
+	$(window).bind('scroll resize load ready', function () {
+
+		if (!Revealator.busy) {
+
+			Revealator.busy = true;
+
+			setTimeout(function () {
+
+				Revealator.busy = false;
+
+				Revealator.refresh();
+
+			}, 50);
+
+		}
+
+	});
+
+});
 
 /**
 
@@ -3872,3 +4116,140 @@ return this.length>0?e?this[0].offsetWidth+parseFloat(this.css("margin-right"))+
 
 }).call(this);
 
+
+
+/*
+
+    Version 1.3.2
+
+    The MIT License (MIT)
+
+
+
+    Copyright (c) 2014 Dirk Groenen
+
+
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of
+
+    this software and associated documentation files (the "Software"), to deal in
+
+    the Software without restriction, including without limitation the rights to
+
+    use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+
+    the Software, and to permit persons to whom the Software is furnished to do so,
+
+    subject to the following conditions:
+
+
+
+    The above copyright notice and this permission notice shall be included in all
+
+    copies or substantial portions of the Software.
+
+*/
+
+
+
+(function($){
+
+    $.fn.viewportChecker = function(useroptions){
+
+        // Define options and extend with user
+
+        var options = {
+
+            classToAdd: 'visible',
+
+            offset: 100,
+
+            callbackFunction: function(elem){}
+
+        };
+
+        $.extend(options, useroptions);
+
+
+
+        // Cache the given element and height of the browser
+
+        var $elem = this,
+
+            windowHeight = $(window).height();
+
+
+
+        this.checkElements = function(){
+
+            // Set some vars to check with
+
+            var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html'),
+
+                viewportTop = $(scrollElem).scrollTop(),
+
+                viewportBottom = (viewportTop + windowHeight);
+
+
+
+            $elem.each(function(){
+
+                var $obj = $(this);
+
+                // If class already exists; quit
+
+                if ($obj.hasClass(options.classToAdd)){
+
+                    return;
+
+                }
+
+
+
+                // define the top position of the element and include the offset which makes is appear earlier or later
+
+                var elemTop = Math.round( $obj.offset().top ) + options.offset,
+
+                    elemBottom = elemTop + ($obj.height());
+
+
+
+                // Add class if in viewport
+
+                if ((elemTop < viewportBottom) && (elemBottom > viewportTop)){
+
+                    $obj.addClass(options.classToAdd);
+
+
+
+                    // Do the callback function. Callback wil send the jQuery object as parameter
+
+                    options.callbackFunction($obj);
+
+                }
+
+            });
+
+        };
+
+
+
+        // Run checkelements on load and scroll
+
+        $(window).scroll(this.checkElements);
+
+        this.checkElements();
+
+
+
+        // On resize change the height var
+
+        $(window).resize(function(e){
+
+            windowHeight = e.currentTarget.innerHeight;
+
+        });
+
+    };
+
+})(jQuery);

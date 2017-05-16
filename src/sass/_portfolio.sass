@@ -75,11 +75,14 @@
     background-color: white
     position: absolute
     top: 0
-    right: -100%
+    right: -115%
     transition: all .5s ease-out
     z-index: 100
+    height: 100%
+    overflow-y: auto
 .container-wrapper-popup-portfolio
     position: relative
+.main-wrapper-popup-portfolio
     padding: 300px 100px 50px 100px
 .brn-close-popup
     position: absolute
@@ -98,9 +101,9 @@
     font-size: 0
     .container-popup-portfolio_title
         @include display-inline-top
-        width: 400px
+        width: 46%
     .container-popup-portfolio_txt
-        width: 485px
+        width: 54%
         @include display-inline-top
 .container-popup-portfolio_title
     position: relative
@@ -125,10 +128,10 @@
     font-size: 0
 .container-popup-portfolio-collection_title
     @include display-inline-top
-    width: 160px
+    width: 18%
 .container-popup-portfolio-collection_product
     @include display-inline-top
-    width: 363px
+    width: 41%
     position: relative
     overflow: hidden
     padding-left: 90px
@@ -197,3 +200,33 @@
         opacity: 0
     .container-popup-portfolio-collection-img img
         -webkit-filter: opacity(100%)
+.container-btn-portfolio
+    position: absolute
+    top: 15%
+    left: 0
+    width: 100%
+    .btn-prev-portfolio
+        width: 18px
+        left: 40px
+        position: absolute
+        cursor: pointer
+        img
+            width: 100%
+    .btn-next-portfolio
+        width: 18px
+        right: 40px
+        position: absolute
+        cursor: pointer
+        img
+            width: 100%
+.container-popup-order
+    width: 100%
+    background-color: #5f5953
+.wrapper-popup-order
+    padding: 70px 310px
+    text-align: center
+    .wrapper-popup-order_content
+        font-family: 'FuturaBook'
+        font-size: 1.25rem
+        color: #bebcba
+        margin-bottom: 55px

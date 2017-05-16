@@ -57,7 +57,7 @@
     <div class="out">
       <div class="container-wrapper">
         <div class="container-wrapper-contant parallax" data-speed="5">
-          <div class="container-wrapper-contant_bread-crumbs">Home  −  Manufacture</div>
+          <div class="container-wrapper-contant_bread-crumbs"><a href="index.html"> Home </a>  −  Manufacture</div>
           <h1 class="wrapper-title parallax" data-speed="7">Manufacture</h1>
           <div class="container-company-started">
             <div class="container-company-started_img parallax" data-speed="3"><img src="img/manufacture/img-1.png"></div>
@@ -267,10 +267,22 @@
               <div class="box-addfile-btn">
                 <div class="box-addfile-btn_container">
                   <div class="box-add-file">
-                    <!--form.dropzone
-                    .fallback
-                        input(name='file' type="file" multiple)
-                    -->
+                    <form class="dropzone">
+                      <div class="fallback">
+                        <input class="inputfile" name="file" type="file" id="file" data-multiple-caption="{count} files selected" multiple>
+                        <label class="box-file" for="file">
+                          <div class="icon-add-file"><svg width="25" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 28">
+<g stroke="null" id="svg_1">
+<g stroke="null" id="svg_2">
+<path stroke="null" id="svg_3" class="fill-add-file" d="m6.3794,17.86129c-0.04922,-0.98869 0.26925,-1.95281 0.93224,-2.65594l9.50768,-10.08336c0.19687,-0.20879 0.19687,-0.57417 0,-0.78297s-0.54139,-0.20879 -0.73826,0l-9.53084,10.10793c-0.88302,0.93649 -1.32598,2.18923 -1.22754,3.4911l0.02316,0.28555c0.17081,2.31819 1.93975,4.08984 4.10243,4.14204c1.15517,0.02456 2.28427,-0.44215 3.12097,-1.32951l9.4324,-10.00353c1.17833,-1.24967 1.84132,-2.99676 1.76894,-4.79298c-0.1216,-3.36214 -2.70118,-6.04572 -5.87137,-6.17468l-0.09844,0c-1.6705,-0.0522 -3.29179,0.62637 -4.47011,1.87605l-10.88288,11.54183c-1.59812,1.69489 -2.40877,4.01308 -2.26111,6.40803l0,0.1044c0.26925,4.08984 3.36417,7.37215 7.19735,7.68534c2.26111,0.15659 4.49617,-0.70313 6.0914,-2.39802l11.17818,-11.85501c0.19687,-0.20879 0.19687,-0.57417 0,-0.78297s-0.54139,-0.20879 -0.73826,0l-11.14923,11.83352c-1.40125,1.4861 -3.31784,2.2138 -5.2576,2.08484c-3.34101,-0.26099 -5.99296,-3.12572 -6.23905,-6.66902l0,-0.1044c-0.1216,-2.0572 0.56455,-4.08984 1.93975,-5.54831l10.85682,-11.51419c0.98146,-1.04088 2.33349,-1.59049 3.70869,-1.5383l0.09844,0c2.6288,0.07676 4.74226,2.31819 4.86385,5.10616c0.04922,1.45846 -0.49218,2.91693 -1.47363,3.96088l-9.4324,10.00353c-0.61377,0.65094 -1.49969,1.01632 -2.35955,0.98869c-1.62128,-0.0522 -2.97332,-1.3817 -3.09492,-3.12572l0.0029,-0.26099z"/>
+</g>
+</g>
+</g>
+</svg>
+                          </div><span class="txt-btn-file">Attach file</span><span class="txt-file"></span>
+                        </label>
+                      </div>
+                    </form>
                   </div>
                   <div class="box-btn-send">
                     <button class="btn">
@@ -371,6 +383,17 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="container-popup-order">
+          <div class="wrapper-popup-order">
+            <div class="wrapper-popup-order_content">If you are interested in this model or you want to order something similar, you can request attaching your drawings:</div><a class="btn anchor-touch make-order-popup" href="#containerForm">
+              <div class="btn-scale btn-green"></div>
+              <div class="btn-txt">make an order</div></a>
+          </div>
+        </div>
+        <div class="container-btn-portfolio">
+          <div class="btn-prev-portfolio"><img src="img/btn-prev-news.png" alt=""></div>
+          <div class="btn-next-portfolio"><img src="img/btn-next-news.png" alt=""></div>
         </div>
       </div>
     </div>
