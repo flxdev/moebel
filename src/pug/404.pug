@@ -3,17 +3,19 @@ extends _layout
 block title
     title Blog
 block content
-    .container-wrapper
-        .container-wrapper-contant.parallax(data-speed='5')
-            .container-wrapper-contant_bread-crumbs <a href="index.html"> Home </a>  −  404
-        .container-wrapper-404
-            .container-wrapper-404_mouse
-                .container-wrapper-404_mouse-block
-                    .container-wrapper-404_first-part-img.mouseov
-                        //img(src='img/first-part.png' alt='')
-                    .container-wrapper-404_text 40<span>4</span>  
-                    .container-wrapper-404_second-part-img.mouseov
-            .container-wrapper-404_txt
-                .container-wrapper-404_txt-sorry Sorry, this page was not found!
-                .container-wrapper-404_txt-link-home
-                    a(href='index.html') Back to home
+    main#barba-wrapper
+        section.barba-container
+            .container-wrapper
+                .container-wrapper-contant.parallax(data-speed='5')
+                    .container-wrapper-contant_bread-crumbs <a href="index.html"> Home </a>  −  404
+                .container-wrapper-404
+                    .container-wrapper-404_mouse
+                        .container-wrapper-404_mouse-block
+                            .container-wrapper-404_first-part-img.mouseov
+                                //img(src='img/first-part.png' alt='')
+                            .container-wrapper-404_text 40<span>4</span>
+                            .container-wrapper-404_second-part-img.mouseov
+                    .container-wrapper-404_txt
+                        .container-wrapper-404_txt-sorry Sorry, this page was not found!
+                        .container-wrapper-404_txt-link-home
+                            a(href='index.html') Back to home

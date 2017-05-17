@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
     <link rel="stylesheet" media="all" href="css/screen.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDeIX-qPM-OiBUCqhMfrcfp9tPwQdTZtM"></script>
   </head>
   <body>
     <script type="text/javascript">!function(e){function t(o){if(n[o])return n[o].exports;var c=n[o]={exports:{},id:o,loaded:!1};return e[o].call(c.exports,c,c.exports,t),c.loaded=!0,c.exports}var n={};return t.m=e,t.c=n,t.p="/assets/",t(0)}({0:function(e,t,n){n(18),n(19)},18:function(e,t){!function(){"use strict";function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(c))o(localStorage.font_css_cache);else{var e=new XMLHttpRequest;e.open("GET",c,!0),e.onreadystatechange=function(){4===e.readyState&&(o(e.responseText),localStorage.font_css_cache=e.responseText,localStorage.font_css_cache_file=c)},e.send()}else{var n=document.createElement("link");n.href=c,n.rel="stylesheet",n.type="text/css",document.getElementsByTagName("head")[0].appendChild(n),document.cookie="font_css_cache"}}function o(e){var t=document.createElement("style");t.setAttribute("type","text/css"),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t),window.onFontLoad&&window.onFontLoad()}var c=window.fonts_href||"../css/font.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}()},19:function(e,t){}});</script>
@@ -55,159 +56,163 @@
       </div>
     </div>
     <div class="out">
-      <div class="container-main-thumbs">
-        <div class="container-main-thumbs_parallax-text">
-          <h1 class="container-main-thumbs_parallax-text_title">We manufacture and supply <br> high quality solid oak <br> furniture</h1>
-          <h3 class="container-main-thumbs_parallax-text_description">For medium <br> and large <br> retailers</h3>
-        </div>
-      </div>
-      <div class="container-parallax-img"><img class="container-parallax-img_bg" src="img/home-img.png"></div>
-      <div class="container-main-thumbs-t">
-        <div class="container-main-thumbs-t_parallax">
-          <h2 class="container-main-thumbs-t_parallax_title">We share the warmth <br> of wood</h2>
-          <div class="container-main-thumbs-t_brief-information">
-            <div class="container-main-thumbs-t_row-8 parallax" data-speed="10">
-              <h3 class="container-main-thumbs-t_title">We are flexible and we can produce furniture in accordance to you drawings</h3>
-              <div class="container-main-thumbs-t_image-product"><img src="img/product/img1.jpg" alt=""></div>
-              <div class="container-main-thumbs-t_image-title">- Products in bedroom and provides a long-term life-time.</div>
-            </div>
-            <div class="container-main-thumbs-t_row-4 parallax" data-speed="20" style="padding-top:21px;">
-              <h4 class="container-main-thumbs-t_title-1">Are you looking for modern design and reliability in combination with practicality and eco friendliness? That is exactly what we offer.</h4>
-              <h5 class="container-main-thumbs-t_title-2">100% solid oak guarantees the maximal eco friendliness of our products in bedroom and provides a long-term life-time.</h5>
-              <div class="container-main-thumbs-t_logo-comp">
-                <ul>
-                  <li><img class="logo-comp-img" src="img/logo-comp1.png"></li>
-                  <li><img class="logo-comp-img" src="img/logo-comp2.png"></li>
-                </ul>
-              </div><a class="link" href="#">About company</a>
+      <main id="barba-wrapper">
+        <section class="barba-container">
+          <div class="container-main-thumbs">
+            <div class="container-main-thumbs_parallax-text">
+              <h1 class="container-main-thumbs_parallax-text_title">We manufacture and supply <br> high quality solid oak <br> furniture</h1>
+              <h3 class="container-main-thumbs_parallax-text_description">For medium <br> and large <br> retailers</h3>
             </div>
           </div>
-          <div class="container-companions">
-            <h4 class="container-companions_txt parallax" data-speed="20">Our strong technological base and high quality of our products are provided by highly productive equipment of worldwide well-known companies</h4>
-            <div class="container-companions_logo-comp">
-              <ul class="parallax" data-speed="10">
-                <li class="revealator-zoomin container-companions_logo-comp_list"><img class="revealator-delay4 container-companions_logo-comp_img" src="img/companions/img1.png"></li>
-                <li class="revealator-zoomin revealator-delay5 container-companions_logo-comp_list"><img class="container-companions_logo-comp_img" src="img/companions/img2.png"></li>
-                <li class="revealator-zoomin revealator-delay6 container-companions_logo-comp_list"><img class="container-companions_logo-comp_img" src="img/companions/img3.png"></li>
-                <li class="revealator-zoomin revealator-delay7 container-companions_logo-comp_list"><img class="container-companions_logo-comp_img" src="img/companions/img4.png"></li>
-                <li class="revealator-zoomin revealator-delay8 container-companions_logo-comp_list"><img class="container-companions_logo-comp_img" src="img/companions/img1.png"></li>
-              </ul>
+          <div class="container-parallax-img"><img class="container-parallax-img_bg" src="img/home-img.png"></div>
+          <div class="container-main-thumbs-t">
+            <div class="container-main-thumbs-t_parallax">
+              <h2 class="container-main-thumbs-t_parallax_title">We share the warmth <br> of wood</h2>
+              <div class="container-main-thumbs-t_brief-information">
+                <div class="container-main-thumbs-t_row-8 parallax" data-speed="10">
+                  <h3 class="container-main-thumbs-t_title">We are flexible and we can produce furniture in accordance to you drawings</h3>
+                  <div class="container-main-thumbs-t_image-product"><img src="img/product/img1.jpg" alt=""></div>
+                  <div class="container-main-thumbs-t_image-title">- Products in bedroom and provides a long-term life-time.</div>
+                </div>
+                <div class="container-main-thumbs-t_row-4 parallax" data-speed="20" style="padding-top:21px;">
+                  <h4 class="container-main-thumbs-t_title-1">Are you looking for modern design and reliability in combination with practicality and eco friendliness? That is exactly what we offer.</h4>
+                  <h5 class="container-main-thumbs-t_title-2">100% solid oak guarantees the maximal eco friendliness of our products in bedroom and provides a long-term life-time.</h5>
+                  <div class="container-main-thumbs-t_logo-comp">
+                    <ul>
+                      <li><img class="logo-comp-img" src="img/logo-comp1.png"></li>
+                      <li><img class="logo-comp-img" src="img/logo-comp2.png"></li>
+                    </ul>
+                  </div><a class="link" href="#">About company</a>
+                </div>
+              </div>
+              <div class="container-companions">
+                <h4 class="container-companions_txt parallax" data-speed="20">Our strong technological base and high quality of our products are provided by highly productive equipment of worldwide well-known companies</h4>
+                <div class="container-companions_logo-comp">
+                  <ul class="parallax" data-speed="10">
+                    <li class="revealator-zoomin container-companions_logo-comp_list"><img class="revealator-delay4 container-companions_logo-comp_img" src="img/companions/img1.png"></li>
+                    <li class="revealator-zoomin revealator-delay5 container-companions_logo-comp_list"><img class="container-companions_logo-comp_img" src="img/companions/img2.png"></li>
+                    <li class="revealator-zoomin revealator-delay6 container-companions_logo-comp_list"><img class="container-companions_logo-comp_img" src="img/companions/img3.png"></li>
+                    <li class="revealator-zoomin revealator-delay7 container-companions_logo-comp_list"><img class="container-companions_logo-comp_img" src="img/companions/img4.png"></li>
+                    <li class="revealator-zoomin revealator-delay8 container-companions_logo-comp_list"><img class="container-companions_logo-comp_img" src="img/companions/img1.png"></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="container-design-home">
-        <div class="container-design-home-bg"></div>
-        <div class="container-sidebar-parent">
-          <div class="sticky">
-            <div class="container-design-home-sidebar theiaStickySidebar">
-              <h2 class="container-design-home-sidebar_title">HigH quality design</h2>
-              <div class="container-design-home-sidebar_line"></div>
-              <p class="container-design-home-sidebar_p">Attention to detail and technical capabilities allow you to do incredible things</p><a class="link" href="#">Explore examples</a><a class="btn anchor-touch" href="#containerForm">
-                <div class="btn-scale btn-green"></div>
-                <div class="btn-txt">make an order</div></a>
+          <div class="container-design-home">
+            <div class="container-design-home-bg"></div>
+            <div class="container-sidebar-parent">
+              <div class="sticky">
+                <div class="container-design-home-sidebar theiaStickySidebar">
+                  <h2 class="container-design-home-sidebar_title">HigH quality design</h2>
+                  <div class="container-design-home-sidebar_line"></div>
+                  <p class="container-design-home-sidebar_p">Attention to detail and technical capabilities allow you to do incredible things</p><a class="link" href="#">Explore examples</a><a class="btn anchor-touch" href="#containerForm">
+                    <div class="btn-scale btn-green"></div>
+                    <div class="btn-txt">make an order</div></a>
+                </div>
+              </div>
+            </div>
+            <div class="container-design-home-list">
+              <div class="container-design-home-list_box parallax" data-speed="5">
+                <div class="container-design-home_work">
+                  <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img2.jpg"></a></div>
+                </div>
+                <div class="container-design-home_work">
+                  <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img3.jpg"></a></div>
+                </div>
+              </div>
+              <div class="container-design-home-list_box parallax" data-speed="12">
+                <div class="container-design-home_work">
+                  <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img3.jpg"></a></div>
+                </div>
+                <div class="container-design-home_work">
+                  <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img2.jpg"></a></div>
+                </div>
+              </div>
+              <div class="container-design-home-list_box parallax" data-speed="13">
+                <div class="container-design-home_work">
+                  <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img2.jpg"></a></div>
+                </div>
+                <div class="container-design-home_work">
+                  <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img3.jpg"></a></div>
+                </div>
+              </div>
+              <div class="container-design-home-list_box parallax" data-speed="16">
+                <div class="container-design-home_work">
+                  <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img3.jpg"></a></div>
+                </div>
+                <div class="container-design-home_work">
+                  <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img2.jpg"></a></div>
+                </div>
+              </div>
+              <div class="container-design-home-list_box parallax" data-speed="19">
+                <div class="container-design-home_work">
+                  <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img2.jpg"></a></div>
+                </div>
+                <div class="container-design-home_work">
+                  <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img3.jpg"></a></div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="container-design-home-list">
-          <div class="container-design-home-list_box parallax" data-speed="5">
-            <div class="container-design-home_work">
-              <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img2.jpg"></a></div>
-            </div>
-            <div class="container-design-home_work">
-              <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img3.jpg"></a></div>
-            </div>
-          </div>
-          <div class="container-design-home-list_box parallax" data-speed="12">
-            <div class="container-design-home_work">
-              <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img3.jpg"></a></div>
-            </div>
-            <div class="container-design-home_work">
-              <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img2.jpg"></a></div>
-            </div>
-          </div>
-          <div class="container-design-home-list_box parallax" data-speed="13">
-            <div class="container-design-home_work">
-              <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img2.jpg"></a></div>
-            </div>
-            <div class="container-design-home_work">
-              <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img3.jpg"></a></div>
-            </div>
-          </div>
-          <div class="container-design-home-list_box parallax" data-speed="16">
-            <div class="container-design-home_work">
-              <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img3.jpg"></a></div>
-            </div>
-            <div class="container-design-home_work">
-              <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img2.jpg"></a></div>
+          <div class="container-home-work">
+            <div class="container-home-work_content">
+              <h2 class="container-home-work_content-title parallax" data-speed="15">Working with <br> us is easy</h2>
+              <div class="container-home-work_content-list parallax" data-speed="10">
+                <div class="container-home-work_content-list_box revealator-zoomin">
+                  <div class="content-list_box-icon"><img src="img/working/img1.png" alt=""></div>
+                  <div class="content-list_box-txt">Filing an application</div>
+                </div>
+                <div class="container-home-work_content-list_box revealator-zoomin revealator-delay2">
+                  <div class="content-list_box-icon"><img src="img/working/img2.png" alt=""></div>
+                  <div class="content-list_box-txt">drawing Revision</div>
+                </div>
+                <div class="container-home-work_content-list_box revealator-zoomin revealator-delay4">
+                  <div class="content-list_box-icon"><img src="img/working/img3.png" alt=""></div>
+                  <div class="content-list_box-txt">Approval drawing</div>
+                </div>
+                <div class="container-home-work_content-list_box revealator-zoomin revealator-delay6">
+                  <div class="content-list_box-icon"><img src="img/working/img4.png" alt=""></div>
+                  <div class="content-list_box-txt">Production of models</div>
+                </div>
+                <div class="container-home-work_content-list_box revealator-zoomin revealator-delay8">
+                  <div class="content-list_box-icon"><img src="img/working/img5.png" alt=""></div>
+                  <div class="content-list_box-txt">Loading in transport customer</div>
+                </div>
+                <div class="container-home-work_content-list_box revealator-zoomin revealator-delay10">
+                  <div class="content-list_box-icon"><img src="img/working/img6.png" alt=""></div>
+                  <div class="content-list_box-txt">Pleasure and long use</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="container-design-home-list_box parallax" data-speed="19">
-            <div class="container-design-home_work">
-              <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img2.jpg"></a></div>
-            </div>
-            <div class="container-design-home_work">
-              <div class="container-design-home_work-img"><a class="design-home_work-link" href="#"><img src="img/product/img3.jpg"></a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-home-work">
-        <div class="container-home-work_content">
-          <h2 class="container-home-work_content-title parallax" data-speed="15">Working with <br> us is easy</h2>
-          <div class="container-home-work_content-list parallax" data-speed="10">
-            <div class="container-home-work_content-list_box revealator-zoomin">
-              <div class="content-list_box-icon"><img src="img/working/img1.png" alt=""></div>
-              <div class="content-list_box-txt">Filing an application</div>
-            </div>
-            <div class="container-home-work_content-list_box revealator-zoomin revealator-delay2">
-              <div class="content-list_box-icon"><img src="img/working/img2.png" alt=""></div>
-              <div class="content-list_box-txt">drawing Revision</div>
-            </div>
-            <div class="container-home-work_content-list_box revealator-zoomin revealator-delay4">
-              <div class="content-list_box-icon"><img src="img/working/img3.png" alt=""></div>
-              <div class="content-list_box-txt">Approval drawing</div>
-            </div>
-            <div class="container-home-work_content-list_box revealator-zoomin revealator-delay6">
-              <div class="content-list_box-icon"><img src="img/working/img4.png" alt=""></div>
-              <div class="content-list_box-txt">Production of models</div>
-            </div>
-            <div class="container-home-work_content-list_box revealator-zoomin revealator-delay8">
-              <div class="content-list_box-icon"><img src="img/working/img5.png" alt=""></div>
-              <div class="content-list_box-txt">Loading in transport customer</div>
-            </div>
-            <div class="container-home-work_content-list_box revealator-zoomin revealator-delay10">
-              <div class="content-list_box-icon"><img src="img/working/img6.png" alt=""></div>
-              <div class="content-list_box-txt">Pleasure and long use</div>
+          <div class="container-home-news">
+            <div class="container-home-news_title"><a class="container-home-news_title-txt parallax" data-speed="18" href="#">News</a></div>
+            <div class="container-news_content">
+              <div class="container-news_content-box">
+                <div class="container-news_content-list parallax" data-speed="15"><a class="container-link-news" href="#">
+                    <div class="container-link-news_img"><img src="img/news/news1.png" alt=""></div>
+                    <div class="container-link-news_content">
+                      <div class="container-link-news_content_data">02/02/2017</div>
+                      <div class="container-link-news_content_txt">
+                        <h3 class="container-link-news_content-title">We have launched a new collection of furniture.</h3>
+                        <h5 class="container-link-news_content-txt">100% solid oak guarantees the maximal eco friendliness of our products in bedroom</h5>
+                      </div>
+                    </div></a></div>
+                <div class="container-news_content-list parallax" data-speed="7"><a class="container-link-news" href="#">
+                    <div class="container-link-news_img"><img src="img/news/news1.png" alt=""></div>
+                    <div class="container-link-news_content">
+                      <div class="container-link-news_content_data">02/02/2017</div>
+                      <div class="container-link-news_content_txt">
+                        <h3 class="container-link-news_content-title">We have launched a new collection of furniture.</h3>
+                        <h5 class="container-link-news_content-txt">100% solid oak guarantees the maximal eco friendliness of our products in bedroom</h5>
+                      </div>
+                    </div></a></div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="container-home-news">
-        <div class="container-home-news_title"><a class="container-home-news_title-txt parallax" data-speed="18" href="#">News</a></div>
-        <div class="container-news_content">
-          <div class="container-news_content-box">
-            <div class="container-news_content-list parallax" data-speed="15"><a class="container-link-news" href="#">
-                <div class="container-link-news_img"><img src="img/news/news1.png" alt=""></div>
-                <div class="container-link-news_content">
-                  <div class="container-link-news_content_data">02/02/2017</div>
-                  <div class="container-link-news_content_txt">
-                    <h3 class="container-link-news_content-title">We have launched a new collection of furniture.</h3>
-                    <h5 class="container-link-news_content-txt">100% solid oak guarantees the maximal eco friendliness of our products in bedroom</h5>
-                  </div>
-                </div></a></div>
-            <div class="container-news_content-list parallax" data-speed="7"><a class="container-link-news" href="#">
-                <div class="container-link-news_img"><img src="img/news/news1.png" alt=""></div>
-                <div class="container-link-news_content">
-                  <div class="container-link-news_content_data">02/02/2017</div>
-                  <div class="container-link-news_content_txt">
-                    <h3 class="container-link-news_content-title">We have launched a new collection of furniture.</h3>
-                    <h5 class="container-link-news_content-txt">100% solid oak guarantees the maximal eco friendliness of our products in bedroom</h5>
-                  </div>
-                </div></a></div>
-          </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
     <!--END out-->
     <footer class="footer" id="containerForm">

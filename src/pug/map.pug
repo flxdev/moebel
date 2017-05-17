@@ -3,17 +3,19 @@ extends _layout
 block title
     title Blog
 block content
-    .container-wrapper
-        .container-wrapper-contant.parallax(data-speed='10')
-            .container-wrapper-contant_bread-crumbs <a href="index.html"> Home </a>  −  Contacts
-            .block-map
-                .container-map-contant_block-map#map
-                .container-map-contant_block-map_contact
-                    .parallax(data-speed='9')
-                        h1.block-map_contact-title contacts
-                        .block-map_contact-adress Latvijas Republika, Riga, <br> Tvaika iela 35, LV-1034
-                        a.block-map_contact-tel.link-tel(href='tel:+371 6 616 55 07') +371 6 616 55 07
-                        a.anchor-touch.block-map_contact-anchor(href='#containerForm') Get in touch
-        .container-map-green-line
-            script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDeIX-qPM-OiBUCqhMfrcfp9tPwQdTZtM")
-            script(src="js/map.js")
+    main#barba-wrapper
+        section.barba-container
+            .container-wrapper
+                .container-wrapper-contant.parallax(data-speed='10')
+                    .container-wrapper-contant_bread-crumbs <a href="index.html"> Home </a>  −  Contacts
+                    .block-map
+                        .container-map-contant_block-map#map
+                        .container-map-contant_block-map_contact
+                            .parallax(data-speed='9')
+                                h1.block-map_contact-title contacts
+                                .block-map_contact-adress Latvijas Republika, Riga, <br> Tvaika iela 35, LV-1034
+                                a.block-map_contact-tel.link-tel(href='tel:+371 6 616 55 07') +371 6 616 55 07
+                                a.anchor-touch.block-map_contact-anchor(href='#containerForm') Get in touch
+                .container-map-green-line
+                    script(src="js/map.js")
+

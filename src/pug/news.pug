@@ -3,84 +3,86 @@ extends _layout
 block title
     title Blog
 block content
-    .container-wrapper
-        .container-wrapper-contant.parallax(data-speed='5')
-            .container-wrapper-contant_bread-crumbs <a href="index.html"> Home </a>  −  News
-            h1.wrapper-title.parallax(data-speed='7') company's news
-            .container-wrapper-link-menu.parallax(data-speed='4')
-                .container-wrapper-link-menu_list
-                    .box-link-menu_list
-                        a.link-menu_list.active(href='#') All News
-                    .box-link-menu_list
-                        a.link-menu_list(href='#') 2017
-                .container-wrapper-link-menu_list
-                    .box-link-menu_list
-                        a.link-menu_list(href='#') 2016
-                    .box-link-menu_list
-                        a.link-menu_list(href='#') 2015
-        .container-wrapper-news-big
-            a.container-wrapper-news-big_link.popup-news(href="#")
-                .wrapper-news-big_link-img.parallax(data-speed='11')
-                    .big-img
-                        img(src='img/news/news2.png')
-                .wrapper-news-big_link-description.parallax(data-speed='7')
-                    .wrapper-news-big_link-description-date 12/02/2017
-                    .wrapper-news-big_link-description-text from 15 to 24 March we participate in the international exhibition in Cologne
-        .container-news_content.parallax(data-speed='3')
-            .container-news_content-box
-                .container-news_content-list.parallax(data-speed='15')
-                    a(href='#').container-link-news.popup-news
-                        .container-link-news_img
-                            img(src='img/news/news1.png' alt='')
-                        .container-link-news_content
-                            .container-link-news_content_data 02/02/2017
-                            .container-link-news_content_txt
-                                h3.container-link-news_content-title We have launched a new collection of furniture.
-                                h5.container-link-news_content-txt 100% solid oak guarantees the maximal eco friendliness of our products in bedroom
-                .container-news_content-list.parallax(data-speed='7')
-                    a(href='#').container-link-news.popup-news
-                        .container-link-news_img
-                            img(src='img/news/news3.png' alt='')
-                        .container-link-news_content
-                            .container-link-news_content_data 02/02/2017
-                            .container-link-news_content_txt
-                                h3.container-link-news_content-title We have launched a new collection of furniture.
-                                h5.container-link-news_content-txt 100% solid oak guarantees the maximal eco friendliness of our products in bedroom
+    main#barba-wrapper
+        section.barba-container
+            .container-wrapper
+                .container-wrapper-contant.parallax(data-speed='5')
+                    .container-wrapper-contant_bread-crumbs <a href="index.html"> Home </a>  −  News
+                    h1.wrapper-title.parallax(data-speed='7') company's news
+                    .container-wrapper-link-menu.parallax(data-speed='4')
+                        .container-wrapper-link-menu_list
+                            .box-link-menu_list
+                                a.link-menu_list.active(href='#') All News
+                            .box-link-menu_list
+                                a.link-menu_list(href='#') 2017
+                        .container-wrapper-link-menu_list
+                            .box-link-menu_list
+                                a.link-menu_list(href='#') 2016
+                            .box-link-menu_list
+                                a.link-menu_list(href='#') 2015
+                .container-wrapper-news-big
+                    a.container-wrapper-news-big_link.popup-news(href="#")
+                        .wrapper-news-big_link-img.parallax(data-speed='11')
+                            .big-img
+                                img(src='img/news/news2.png')
+                        .wrapper-news-big_link-description.parallax(data-speed='7')
+                            .wrapper-news-big_link-description-date 12/02/2017
+                            .wrapper-news-big_link-description-text from 15 to 24 March we participate in the international exhibition in Cologne
+                .container-news_content.parallax(data-speed='3')
+                    .container-news_content-box
+                        .container-news_content-list.parallax(data-speed='15')
+                            a(href='#').container-link-news.popup-news
+                                .container-link-news_img
+                                    img(src='img/news/news1.png' alt='')
+                                .container-link-news_content
+                                    .container-link-news_content_data 02/02/2017
+                                    .container-link-news_content_txt
+                                        h3.container-link-news_content-title We have launched a new collection of furniture.
+                                        h5.container-link-news_content-txt 100% solid oak guarantees the maximal eco friendliness of our products in bedroom
+                        .container-news_content-list.parallax(data-speed='7')
+                            a(href='#').container-link-news.popup-news
+                                .container-link-news_img
+                                    img(src='img/news/news3.png' alt='')
+                                .container-link-news_content
+                                    .container-link-news_content_data 02/02/2017
+                                    .container-link-news_content_txt
+                                        h3.container-link-news_content-title We have launched a new collection of furniture.
+                                        h5.container-link-news_content-txt 100% solid oak guarantees the maximal eco friendliness of our products in bedroom
 
-                .container-news_content-list.parallax(data-speed='15')
-                    a(href='#').container-link-news.popup-news
-                        .container-link-news_img
-                            img(src='img/news/news4.png' alt='')
-                        .container-link-news_content
-                            .container-link-news_content_data 02/02/2017
-                            .container-link-news_content_txt
-                                h3.container-link-news_content-title We have launched a new collection of furniture.
-                                h5.container-link-news_content-txt 100% solid oak guarantees the maximal eco friendliness of our products in bedroom
-                .container-news_content-list.parallax(data-speed='7')
-                    a(href='#').container-link-news.popup-news
-                        .container-link-news_img
-                            img(src='img/news/news5.png' alt='')
-                        .container-link-news_content
-                            .container-link-news_content_data 02/02/2017
-                            .container-link-news_content_txt
-                                h3.container-link-news_content-title We have launched a new collection of furniture.
-                                h5.container-link-news_content-txt 100% solid oak guarantees the maximal eco friendliness of our products in bedroom
+                        .container-news_content-list.parallax(data-speed='15')
+                            a(href='#').container-link-news.popup-news
+                                .container-link-news_img
+                                    img(src='img/news/news4.png' alt='')
+                                .container-link-news_content
+                                    .container-link-news_content_data 02/02/2017
+                                    .container-link-news_content_txt
+                                        h3.container-link-news_content-title We have launched a new collection of furniture.
+                                        h5.container-link-news_content-txt 100% solid oak guarantees the maximal eco friendliness of our products in bedroom
+                        .container-news_content-list.parallax(data-speed='7')
+                            a(href='#').container-link-news.popup-news
+                                .container-link-news_img
+                                    img(src='img/news/news5.png' alt='')
+                                .container-link-news_content
+                                    .container-link-news_content_data 02/02/2017
+                                    .container-link-news_content_txt
+                                        h3.container-link-news_content-title We have launched a new collection of furniture.
+                                        h5.container-link-news_content-txt 100% solid oak guarantees the maximal eco friendliness of our products in bedroom
 
-                .container-news_content-list.parallax(data-speed='15')
-                    a(href='#').container-link-news.popup-news
-                        .container-link-news_img
-                            img(src='img/news/news3.png' alt='')
-                        .container-link-news_content
-                            .container-link-news_content_data 02/02/2017
-                            .container-link-news_content_txt
-                                h3.container-link-news_content-title We have launched a new collection of furniture.
-                                h5.container-link-news_content-txt 100% solid oak guarantees the maximal eco friendliness of our products in bedroom
-                .container-news_content-list.parallax(data-speed='7')
-                    a(href='#').container-link-news.popup-news
-                        .container-link-news_img
-                            img(src='img/news/news6.png' alt='')
-                        .container-link-news_content
-                            .container-link-news_content_data 02/02/2017
-                            .container-link-news_content_txt
-                                h3.container-link-news_content-title We have launched a new collection of furniture.
-                                h5.container-link-news_content-txt 100% solid oak guarantees the maximal eco friendliness of our products in bedroom
+                        .container-news_content-list.parallax(data-speed='15')
+                            a(href='#').container-link-news.popup-news
+                                .container-link-news_img
+                                    img(src='img/news/news3.png' alt='')
+                                .container-link-news_content
+                                    .container-link-news_content_data 02/02/2017
+                                    .container-link-news_content_txt
+                                        h3.container-link-news_content-title We have launched a new collection of furniture.
+                                        h5.container-link-news_content-txt 100% solid oak guarantees the maximal eco friendliness of our products in bedroom
+                        .container-news_content-list.parallax(data-speed='7')
+                            a(href='#').container-link-news.popup-news
+                                .container-link-news_img
+                                    img(src='img/news/news6.png' alt='')
+                                .container-link-news_content
+                                    .container-link-news_content_data 02/02/2017
+                                    .container-link-news_content_txt
+                                        h3.container-link-news_content-title We have launched a new collection of furniture.
+                                        h5.container-link-news_content-txt 100% solid oak guarantees the maximal eco friendliness of our products in bedroom
