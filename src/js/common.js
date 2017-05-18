@@ -357,10 +357,6 @@ var BarbaWidget = {
             })
         },
 
-        // initMaps: function () {
-        //
-        // },
-
         scrollForm: function () {
             $("a.anchor-touch").click(function() {
                 var elementClick = $(this).attr("href")
