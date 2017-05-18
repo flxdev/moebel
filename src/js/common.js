@@ -80,6 +80,36 @@ scrollForm();
 initFile();
 initMouseMove();
 
+$(window).scroll(function (e) {
+    simpleParallax();
+    initFixSliderAbout();
+    initOpacityBest();
+
+    var heightAddClass = $(this).scrollTop();
+    var scrollHeight = $('.container-main-thumbs').height() + $('.container-main-thumbs-t').height();
+    var scrollHeight2 = $('.container-main-thumbs').height() + $('.container-main-thumbs-t').height() + $('.container-design-home').height() - 900;
+    var scrollHeight3 = $('.out').height() + $('.footer').height() - 890;
+    var out = $('.out').height()-60;
+    if (heightAddClass >= scrollHeight && heightAddClass < scrollHeight2) {
+        $('.container-design-home-bg').css('opacity', '1');
+    } else {
+        $('.container-design-home-bg').css('opacity', '0');
+    }
+    if (heightAddClass >= out){
+        $('.icon-logo .fill').css('fill', '#75706b');
+        $('.icon-mail .feedback-fill-circle').css('fill', '#75706b');
+    }   else {
+        $('.icon-logo .fill').css('fill', '#d9b189');
+        $('.icon-mail .feedback-fill-circle').css('fill', '#c9db75');
+    }
+    if (heightAddClass >= scrollHeight3){
+        $('.box-scroll').addClass('show-scroll-top');
+    } else {
+        $('.box-scroll').removeClass('show-scroll-top');
+    }
+});
+
+
 //Parallax
 if ($('.parallax').length) {
     Parallax($('.parallax'));
@@ -143,7 +173,7 @@ function Parallax($parallaxes) {
 //Parallax
 function simpleParallax() {
     var scrolled = $(window).scrollTop() + 1;
-    $('.header-parallax').css({"transform": "translate3d(0px, " +-(scrolled * 0.8)+"px, 0px)"});
+    $('.container-header-parallax').css({"transform": "translate3d(0px, " +-(scrolled * 1)+"px, 0px)"});
     $('.container-main-thumbs_parallax-text').css({"transform": "translate3d(0px, " +-(scrolled * 0.7)+"px, 0px)","opacity":1 -(scrolled * 0.0085)});
     $('.container-parallax-img').css({"transform": "translate3d(0px, " + +(scrolled * 8)+"px, 0px)", "opacity":1 -(scrolled * 0.07)});
     $('.container-main-thumbs-t_parallax').css({"transform": "translate3d(0px, " + -(scrolled * 0.1)+"px, 0px)","opacity":0 +(scrolled * 0.01)});
@@ -216,35 +246,6 @@ function initOpacityBest() {
     }
 }
 
-$(window).scroll(function (e) {
-    simpleParallax();
-    initFixSliderAbout();
-    initOpacityBest();
-
-    var heightAddClass = $(this).scrollTop();
-    var scrollHeight = $('.container-main-thumbs').height() + $('.container-main-thumbs-t').height();
-    var scrollHeight2 = $('.container-main-thumbs').height() + $('.container-main-thumbs-t').height() + $('.container-design-home').height() - 900;
-    var scrollHeight3 = $('.out').height() + $('.footer').height() - 890;
-    var out = $('.out').height()-60;
-    if (heightAddClass >= scrollHeight && heightAddClass < scrollHeight2) {
-        $('.container-design-home-bg').css('opacity', '1');
-    } else {
-        $('.container-design-home-bg').css('opacity', '0');
-    }
-    if (heightAddClass >= out){
-        $('.icon-logo .fill').css('fill', '#75706b');
-        $('.icon-mail .feedback-fill-circle').css('fill', '#75706b');
-    }   else {
-        $('.icon-logo .fill').css('fill', '#d9b189');
-        $('.icon-mail .feedback-fill-circle').css('fill', '#c9db75');
-    }
-    if (heightAddClass >= scrollHeight3){
-        $('.box-scroll').addClass('show-scroll-top');
-    } else {
-        $('.box-scroll').removeClass('show-scroll-top');
-    }
-});
-
 function initAnimate() {
     $('.container-popup-portfolio-img_list').addClass("hidden").viewportChecker({
         classToAdd: 'visible animated fadeIn',
@@ -314,39 +315,6 @@ var BarbaWidget = {
             });
         },
 
-        initPopupNews:function () {
-            $('.popup-news').click(function () {
-                $(this).addClass('open-popup');
-                $('body,html').animate({scrollTop:0},200);
-                $('.container-overflow').addClass('overflow-open');
-                $('.container-popup-news').css('right', '0');
-                $('body').addClass('overflow-hidden');
-                event.preventDefault();
-            });
-
-            $('.container-overflow').click(function () {
-                $(this).removeClass('overflow-open');
-                $('.container-popup-news').css('right', '-100%');
-                $('body').removeClass('overflow-hidden');
-            });
-
-            $('.brn-close-popup').click(function () {
-                $('.container-overflow').removeClass('overflow-open');
-                $('.container-popup-news').css('right', '-100%');
-                $('body').removeClass('overflow-hidden');
-            });
-        },
-
-        initSwiperNews:function () {
-            var swiper = new Swiper('.swiper-slider-news', {
-                paginationClickable: true,
-                loop: true,
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev',
-                speed: 800
-            });
-        },
-
         initPopupPortfolio: function () {
             $('.popup-portfolio').click(function () {
                 $(this).addClass('open-popup');
@@ -389,7 +357,148 @@ var BarbaWidget = {
             })
         },
 
-        initMaps: function () {
+        // initMaps: function () {
+        //
+        // },
+
+        scrollForm: function () {
+            $("a.anchor-touch").click(function() {
+                var elementClick = $(this).attr("href")
+                var destination = $(elementClick).offset().top;
+                jQuery("html:not(:animated),body:not(:animated)").animate({
+                    scrollTop: destination
+                }, 800);
+                $('.input-name').focus();
+                return false;
+            });
+        },
+
+        focusInput: function () {
+            var inputFocus = $('.input-box');
+            var inputLabel = $('.input-label');
+
+            $(inputFocus).on('focus', function () {
+                $(this).parents().closest('.box-input').find('.form-label').find(inputLabel).addClass('label-focus');
+            });
+
+            $(inputFocus).on('focusout', function () {
+                if (this != null && this.value.length == 0){
+                    $(this).parents().closest('.box-input').find('.form-label').find(inputLabel).removeClass('label-focus');
+                }else {
+                    $(this).parents().closest('.box-input').find('.form-label').find(inputLabel).addClass('label-focus');
+                }
+            });
+        },
+
+
+
+        fadeOut: function() {
+            return $(this.oldContainer).animate({
+                opacity: 0
+            }).promise();
+        },
+
+        movePages: function() {
+            var scope = this;
+            this.initVideo();
+            this.initFixBlock();
+            this.initSwiperGallery();
+            this.initHoverSwiper();
+            this.initPopupPortfolio();
+            this.initMouseMove();
+            this.scrollForm();
+            this.focusInput();
+            // if ($("#map").length > 0) window.onload = this.initMaps();
+
+
+
+            TweenLite.set(this.newContainer, {
+                visibility: 'visible',
+                xPercent: 100,
+                position: 'absolute',
+                left: 0,
+                top: 0,
+                right: 0
+            });
+
+            TweenLite.to(this.oldContainer, 0.6, { xPercent: -100 });
+            TweenLite.to(this.newContainer, 0.6, { xPercent: 0, onComplete: function() {
+                TweenLite.set(scope.newContainer, { clearProps: 'all' });
+                scope.done();
+            }});
+
+            //Parallax
+            if ($('.parallax').length) {
+                Parallax($('.parallax'));
+            }
+
+            function Parallax($parallaxes) {
+                $(window).on('scroll', function () {
+                    var scrollTop = $(window).scrollTop(),
+                        bSH = $('body').scrollHeight,
+                        $prlx, $wrapper, wrapperRect, wrapperOffset, wrapperMargin,
+                        speed, direction, y, scrollHeight, scrollPosition, axis,
+                        data = {}, topBorder;
+                    $parallaxes.each(function () {
+                        data = {};
+                        $prlx = $(this);
+                        axis = $prlx.data('axis') || 'y',
+                            topBorder = 0,
+                            bottomBorder = 0;
+
+                        if (!$prlx.length) {
+                            return false;
+                        }
+
+                        if ($prlx.closest('.js-parallax-wrapper').length) {
+                            $wrapper = $prlx.closest('.js-parallax-wrapper');
+                        } else {
+                            $wrapper = $prlx.parent();
+                        }
+
+                        wrapperRect = $wrapper[0].getBoundingClientRect();
+                        speed = parseInt($prlx.data('speed'), 10) / 109 || 0.20;
+                        direction = parseInt($prlx.data('direction'), 10) || 1;
+                        wrapperOffset = $wrapper.offset().top;
+
+                        wrapperMargin = ($(window).height() - wrapperRect.height + 850) / 2;
+
+                        if (0 > wrapperMargin && (scrollTop + wrapperRect.top) <= topBorder) {
+                            wrapperMargin = 0;
+                        }
+
+                        y = Math.round((wrapperRect.top - wrapperMargin) * speed) * direction;
+
+                        if (scrollTop === 0) {
+                            y = 0;
+                        } else {
+                            scrollHeight = bSH;
+                            scrollPosition = $(window).height() + scrollTop;
+                            if (
+                                scrollHeight - wrapperOffset - $wrapper.innerHeight() <= 2 &&
+                                (scrollHeight - scrollPosition) / scrollHeight === 0
+                            ) {
+                                y = 0;
+                            }
+                        }
+                        data[axis] = y;
+                        TweenLite.to($prlx, 1, data);
+                    });
+                });
+            };
+            $(window).scroll(function (e) {
+
+            });
+        }
+
+    })
+};
+
+var MapPage = Barba.BaseView.extend({
+    namespace: 'map-page',
+
+    onEnterCompleted: function() {
+        function initMap() {
             var coordinates = {lat: 57.0162005, lng: 24.1228066},
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: coordinates,
@@ -587,141 +696,58 @@ var BarbaWidget = {
                 map: map,
                 icon: markerImage
             });
-        },
+        }
+        setTimeout(initMap,500)
+    }
+});
 
-        scrollForm: function () {
-            $("a.anchor-touch").click(function() {
-                var elementClick = $(this).attr("href")
-                var destination = $(elementClick).offset().top;
-                jQuery("html:not(:animated),body:not(:animated)").animate({
-                    scrollTop: destination
-                }, 800);
-                $('.input-name').focus();
-                return false;
-            });
-        },
+var NewsPage = Barba.BaseView.extend({
+    namespace: 'news-page',
 
-        focusInput: function () {
-            var inputFocus = $('.input-box');
-            var inputLabel = $('.input-label');
-
-            $(inputFocus).on('focus', function () {
-                $(this).parents().closest('.box-input').find('.form-label').find(inputLabel).addClass('label-focus');
+    onEnterCompleted: function() {
+        function initPopupNews() {
+            $('.popup-news').click(function () {
+                $(this).addClass('open-popup');
+                $('body,html').animate({scrollTop:0},200);
+                $('.container-overflow').addClass('overflow-open');
+                $('.container-popup-news').css('right', '0');
+                $('body').addClass('overflow-hidden');
+                event.preventDefault();
             });
 
-            $(inputFocus).on('focusout', function () {
-                if (this != null && this.value.length == 0){
-                    $(this).parents().closest('.box-input').find('.form-label').find(inputLabel).removeClass('label-focus');
-                }else {
-                    $(this).parents().closest('.box-input').find('.form-label').find(inputLabel).addClass('label-focus');
-                }
-            });
-        },
-
-
-
-        fadeOut: function() {
-            return $(this.oldContainer).animate({
-                opacity: 0
-            }).promise();
-        },
-
-        movePages: function() {
-            var scope = this;
-            this.initVideo();
-            this.initFixBlock();
-            this.initSwiperGallery();
-            this.initHoverSwiper();
-            this.initPopupNews();
-            this.initSwiperNews();
-            this.initPopupPortfolio();
-            this.initMouseMove();
-            this.scrollForm();
-            this.focusInput();
-            if ($("#map").length > 0) window.onload = this.initMaps();
-
-
-            TweenLite.set(this.newContainer, {
-                visibility: 'visible',
-                xPercent: 100,
-                position: 'absolute',
-                left: 0,
-                top: 0,
-                right: 0
+            $('.container-overflow').click(function () {
+                $(this).removeClass('overflow-open');
+                $('.container-popup-news').css('right', '-100%');
+                $('body').removeClass('overflow-hidden');
             });
 
-            TweenLite.to(this.oldContainer, 0.6, { xPercent: -100 });
-            TweenLite.to(this.newContainer, 0.6, { xPercent: 0, onComplete: function() {
-                TweenLite.set(scope.newContainer, { clearProps: 'all' });
-                scope.done();
-            }});
-
-            //Parallax
-            if ($('.parallax').length) {
-                Parallax($('.parallax'));
-            }
-
-            function Parallax($parallaxes) {
-                $(window).on('scroll', function () {
-                    var scrollTop = $(window).scrollTop(),
-                        bSH = $('body').scrollHeight,
-                        $prlx, $wrapper, wrapperRect, wrapperOffset, wrapperMargin,
-                        speed, direction, y, scrollHeight, scrollPosition, axis,
-                        data = {}, topBorder;
-                    $parallaxes.each(function () {
-                        data = {};
-                        $prlx = $(this);
-                        axis = $prlx.data('axis') || 'y',
-                            topBorder = 0,
-                            bottomBorder = 0;
-
-                        if (!$prlx.length) {
-                            return false;
-                        }
-
-                        if ($prlx.closest('.js-parallax-wrapper').length) {
-                            $wrapper = $prlx.closest('.js-parallax-wrapper');
-                        } else {
-                            $wrapper = $prlx.parent();
-                        }
-
-                        wrapperRect = $wrapper[0].getBoundingClientRect();
-                        speed = parseInt($prlx.data('speed'), 10) / 109 || 0.20;
-                        direction = parseInt($prlx.data('direction'), 10) || 1;
-                        wrapperOffset = $wrapper.offset().top;
-
-                        wrapperMargin = ($(window).height() - wrapperRect.height + 850) / 2;
-
-                        if (0 > wrapperMargin && (scrollTop + wrapperRect.top) <= topBorder) {
-                            wrapperMargin = 0;
-                        }
-
-                        y = Math.round((wrapperRect.top - wrapperMargin) * speed) * direction;
-
-                        if (scrollTop === 0) {
-                            y = 0;
-                        } else {
-                            scrollHeight = bSH;
-                            scrollPosition = $(window).height() + scrollTop;
-                            if (
-                                scrollHeight - wrapperOffset - $wrapper.innerHeight() <= 2 &&
-                                (scrollHeight - scrollPosition) / scrollHeight === 0
-                            ) {
-                                y = 0;
-                            }
-                        }
-                        data[axis] = y;
-                        TweenLite.to($prlx, 1, data);
-                    });
-                });
-            };
+            $('.brn-close-popup').click(function () {
+                $('.container-overflow').removeClass('overflow-open');
+                $('.container-popup-news').css('right', '-100%');
+                $('body').removeClass('overflow-hidden');
+            });
         }
 
-    })
-};
+        function initSwiperNews() {
+            var swiper = new Swiper('.swiper-slider-news', {
+                paginationClickable: true,
+                loop: true,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                speed: 800
+            });
+        }
+
+        initPopupNews();
+        initSwiperNews();
+    }
+});
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
     BarbaWidget.init();
+    MapPage.init();
+    NewsPage.init();
 });
 
