@@ -4367,10 +4367,12 @@ p {
   color: #c6a079; }
 
 .container-btn-news {
-  position: absolute;
-  top: 24%;
-  left: 0;
-  width: 100%; }
+  position: fixed;
+  top: 47%;
+  right: -115%;
+  width: 1100px;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out; }
   .container-btn-news .btn-prev-news {
     width: 18px;
     left: 40px;
@@ -4614,10 +4616,12 @@ p {
   -webkit-filter: opacity(100%); }
 
 .container-btn-portfolio {
-  position: absolute;
-  top: 15%;
-  left: 0;
-  width: 100%; }
+  position: fixed;
+  top: 47%;
+  right: -115%;
+  width: 1100px;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out; }
   .container-btn-portfolio .btn-prev-portfolio {
     width: 18px;
     left: 40px;
@@ -4896,6 +4900,83 @@ p {
   .container-footer-scroll-top .box-scroll.show-scroll-top {
     margin-top: 0; }
 
+.dz-message {
+  cursor: pointer; }
+  .dz-message .txt-def-mes {
+    font-family: FuturaBook;
+    font-size: 20px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+    color: white; }
+    .dz-message .txt-def-mes:after {
+      display: block;
+      content: "";
+      height: 2px;
+      width: 100%;
+      background-color: #fff;
+      -webkit-transition: width .3s ease-in-out;
+      transition: width .3s ease-in-out;
+      margin-top: 2px; }
+
+.dz-message:hover .txt-def-mes {
+  color: #95a259;
+  text-decoration: none; }
+
+.dz-message:hover .fill-add-file {
+  fill: #95a259; }
+
+.dz-message:hover .txt-def-mes:after {
+  width: 0; }
+
+.img-none {
+  display: none; }
+
+.dz-details {
+  display: inline-block;
+  vertical-align: middle; }
+  .dz-details .dz-filename {
+    font-family: FuturaBook;
+    font-size: 20px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+    color: white;
+    cursor: pointer; }
+    .dz-details .dz-filename:after {
+      display: block;
+      content: "";
+      height: 2px;
+      width: 100%;
+      background-color: #fff;
+      -webkit-transition: width .3s ease-in-out;
+      transition: width .3s ease-in-out;
+      margin-top: 2px; }
+  .dz-details .dz-filename:hover {
+    color: #95a259;
+    text-decoration: none; }
+  .dz-details .dz-filename:hover:after {
+    width: 0; }
+
+.txt-def-mes {
+  display: inline-block;
+  vertical-align: middle; }
+
+.dz-image-preview {
+  padding-left: 30px;
+  width: 60%;
+  margin-bottom: 10px; }
+
+.dz-remove {
+  background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" version="1.1" height="15px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><g><path fill="#FFFFFF" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/></g></svg>');
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px; }
+  .dz-remove:hover {
+    background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" version="1.1" height="15px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><g><path fill="#95a259" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/></g></svg>'); }
+
 .btn {
   position: relative;
   width: 220px;
@@ -5149,7 +5230,10 @@ p {
 
   .container-wrapper-404_mouse-block .container-wrapper-404_second-part-img {
     top: 32%;
-    left: 52%; } }
+    left: 52%; }
+
+  .container-btn-portfolio, .container-btn-news {
+    width: 920px; } }
   @media all and (max-width: 1044px) {
 
   .container-wrapper-404_mouse-block .container-wrapper-404_second-part-img {
