@@ -17,3 +17,5 @@
 //=include lib/dropzone.js
 
 //=include lib/viewportchecker.js
+
+//=include lib/jquery.form-validator.min.js

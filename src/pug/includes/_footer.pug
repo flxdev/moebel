@@ -13,22 +13,22 @@ footer.footer#containerForm
                         .form-label
                             label.input-label Full name*
                         .form-input
-                            input(type='text').input-box.input-name
+                            input(data-validation="required" type="text" data-validation-error-msg="Name is not correct").input-box.input-name
                     .box-input
                         .form-label
                             label.input-label Phone number*
                         .form-input
-                            input(type='tel').input-box
+                            input.input-box(type='text' data-validation="custom" data-validation-regexp="(([0-9-]+)).{7,}")
                     .box-input
                         .form-label
                             label.input-label E-mail*
                         .form-input
-                            input(type='email').input-box
+                            input(data-validation="email required" type="text" data-validation-error-msg="Email is not correct").input-box
                     .box-input
                         .form-label
                             label.input-label Message*
                         .form-input
-                            textarea(type='text').input-box.textarea-box
+                            textarea(data-validation="required" type="text" data-validation-error-msg="Message is not correct").input-box.textarea-box
                     .box-addfile-btn
                         .box-addfile-btn_container
                             .box-add-file
@@ -52,7 +52,7 @@ footer.footer#containerForm
                                     span.txt-def-mes Attach file
 
                             .box-btn-send
-                                button.btn
+                                button.btn(type='submit' value="Validate")
                                     .btn-scale.btn-gray
                                     .btn-txt Send request
         .container-footer-menu

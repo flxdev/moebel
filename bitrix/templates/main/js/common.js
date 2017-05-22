@@ -912,6 +912,32 @@ function initDropzone() {
     };
 };
 
+function initValidForm() {
+    var form_valid = $(".js-form");
+    if (form_valid.length) {
+        form_valid.each(function() {
+            var form_this  = $(this);
+            $.validate({
+                form: form_this,
+                borderColorOnError: true,
+                scrollToTopOnError: false,
+                modules : 'html5'
+                // onSuccess: function($form) {
+                //     if (!$form.parent().parent().hasClass('js-popup-sing-in'))
+                //         if ($form.hasClass('js-no-popup')) {
+                //             $($form).trigger("reset");
+                //         }
+                //         else {
+                //             $form.parent().parent().fadeOut().next().fadeIn();
+                //         }
+                //
+                //     return false;
+                // }
+            });
+        });
+    }
+}
+
 
 
 focusInput();
@@ -928,6 +954,7 @@ initPopupNews();
 initSwiperNews();
 initMakeOrder();
 initDropzone();
+initValidForm();
 
 BarbaWidget.init();
 MapPage.init();
