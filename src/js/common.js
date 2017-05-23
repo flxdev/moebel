@@ -381,7 +381,7 @@ var BarbaWidget = {
     init: function() {
         var scope = this;
         Barba.Pjax.start();
-        Barba.Prefetch.init();
+        // Barba.Prefetch.init();
         Barba.Pjax.getTransition = function() {
             return scope.MovePage;
         };
