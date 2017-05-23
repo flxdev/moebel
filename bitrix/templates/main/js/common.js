@@ -278,7 +278,7 @@ function initSwiperGallery() {
 function initPopupPortfolio() {
     $('.popup-portfolio').click(function () {
         $(this).addClass('open-popup');
-        $('body,html').animate({scrollTop:0},200);
+        // $('body,html').animate({scrollTop:0},200);
         $('.container-overflow').addClass('overflow-open');
         $('.container-popup-portfolio').css('right', '0');
         $('.container-btn-portfolio').css('right', '0');
@@ -343,7 +343,7 @@ function initHoverSwiper() {
 function initPopupNews() {
     $('.popup-news').click(function () {
         $(this).addClass('open-popup');
-        $('body,html').animate({scrollTop:0},200);
+        // $('body,html').animate({scrollTop:0},200);
         $('.container-overflow').addClass('overflow-open');
         $('.container-popup-news').css('right', '0');
         $('.container-btn-news').css('right', '0');
@@ -768,7 +768,7 @@ var NewsPage = Barba.BaseView.extend({
         function initPopupNews() {
             $('.popup-news').click(function () {
                 $(this).addClass('open-popup');
-                $('body,html').animate({scrollTop:0},200);
+                // $('body,html').animate({scrollTop:0},200);
                 $('.container-overflow').addClass('overflow-open');
                 $('.container-popup-news').css('right', '0');
                 $('body').addClass('overflow-hidden');
@@ -847,7 +847,7 @@ var PortfolioPage = Barba.BaseView.extend({
         function initPopupPortfolio() {
             $('.popup-portfolio').click(function () {
                 $(this).addClass('open-popup');
-                $('body,html').animate({scrollTop:0},200);
+                // $('body,html').animate({scrollTop:0},200);
                 $('.container-overflow').addClass('overflow-open');
                 $('.container-popup-portfolio').css('right', '0');
                 $('body').addClass('overflow-hidden');

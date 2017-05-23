@@ -3559,7 +3559,7 @@ p {
   overflow-y: auto;
   width: 1088px;
   background-color: white;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -100%;
   -webkit-transition: all .5s ease-out;
@@ -4481,7 +4481,7 @@ p {
 .container-popup-portfolio {
   width: 1088px;
   background-color: white;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -115%;
   -webkit-transition: all .5s ease-out;
