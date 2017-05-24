@@ -277,10 +277,14 @@ function initSwiperGallery() {
 
 function initPopupPortfolio() {
     $('.popup-portfolio').click(function () {
+
+        var clickPortfolio = $(this).data("link-portfolio");
+        var openPopupPortfolio = $("body").find("[data-portfolio='" + clickPortfolio + "']");
+
         $(this).addClass('open-popup');
         // $('body,html').animate({scrollTop:0},200);
         $('.container-overflow').addClass('overflow-open');
-        $('.container-popup-portfolio').css('right', '0');
+        openPopupPortfolio.css('right', '0');
         $('.container-btn-portfolio').css('right', '0');
         $('body').addClass('overflow-hidden');
         event.preventDefault();
@@ -771,13 +775,12 @@ var NewsPage = Barba.BaseView.extend({
         function initPopupNews() {
             $('.popup-news').click(function () {
                 var clickNews = $(this).data("link-news");
-                console.log(clickNews);
-                var openPopup = $("body").find("[data-news='" + clickNews + "']");
+                var openPopupNews = $("body").find("[data-news='" + clickNews + "']");
 
                 $(this).addClass('open-popup');
                 // $('body,html').animate({scrollTop:0},200);
                 $('.container-overflow').addClass('overflow-open');
-                openPopup.css('right', '0');
+                openPopupNews.css('right', '0');
                 $('body').addClass('overflow-hidden');
                 event.preventDefault();
             });
@@ -853,10 +856,15 @@ var PortfolioPage = Barba.BaseView.extend({
     onEnterCompleted: function() {
         function initPopupPortfolio() {
             $('.popup-portfolio').click(function () {
+
+                var clickPortfolio = $(this).data("link-portfolio");
+                var openPopupPortfolio = $("body").find("[data-portfolio='" + clickPortfolio + "']");
+
                 $(this).addClass('open-popup');
                 // $('body,html').animate({scrollTop:0},200);
                 $('.container-overflow').addClass('overflow-open');
-                $('.container-popup-portfolio').css('right', '0');
+                openPopupPortfolio.css('right', '0');
+                $('.container-btn-portfolio').css('right', '0');
                 $('body').addClass('overflow-hidden');
                 event.preventDefault();
             });
@@ -864,12 +872,14 @@ var PortfolioPage = Barba.BaseView.extend({
             $('.container-overflow').click(function () {
                 $(this).removeClass('overflow-open');
                 $('.container-popup-portfolio').css('right', '-115%');
+                $('.container-btn-portfolio').css('right', '-115%');
                 $('body').removeClass('overflow-hidden');
             });
 
             $('.brn-close-popup').click(function () {
                 $('.container-overflow').removeClass('overflow-open');
                 $('.container-popup-portfolio').css('right', '-115%');
+                $('.container-btn-portfolio').css('right', '-115%');
                 $('body').removeClass('overflow-hidden');
             });
         }
@@ -878,6 +888,7 @@ var PortfolioPage = Barba.BaseView.extend({
             $('.make-order-popup').click(function () {
                 $('.container-overflow').removeClass('overflow-open');
                 $('.container-popup-portfolio').css('right', '-115%');
+                $('.container-btn-portfolio').css('right', '-115%');
                 $('body').removeClass('overflow-hidden');
 
                 var elementClick = $(this).attr("href");
