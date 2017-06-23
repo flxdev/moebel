@@ -4303,7 +4303,7 @@ p {
   .container-wrapper-link-menu_list .link-menu_list.active {
     font-family: 'FuturaMedium';
     font-size: 1.125rem;
-    text-transform: uppercase;
+    text-transform: uppercaseF;
     letter-spacing: 1.1px; }
   .container-wrapper-link-menu_list .link-menu_list {
     font-family: 'FuturaBook';
@@ -4563,7 +4563,7 @@ p {
     width: 100%; }
   .container-popup-portfolio-collection_product .container-popup-portfolio-collection_txt {
     position: absolute;
-    top: 50%;
+    top: 85px;
     left: 45px; }
     .container-popup-portfolio-collection_product .container-popup-portfolio-collection_txt .container-popup-portfolio-collection_txt-prod {
       font-family: 'FuturaBook';

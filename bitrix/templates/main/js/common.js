@@ -18,6 +18,10 @@ function focusInput() {
 function scrollUp() {
     $('.btn-scroll-top').click(function () {
         $('body,html').animate({scrollTop:0},800);
+    });
+
+    $('.link-footer').click(function () {
+        $('body,html').animate({scrollTop:0},800);
     })
 }
 
@@ -552,7 +556,7 @@ var BarbaWidget = {
                         TweenLite.to($prlx, 1, data);
                     });
                 });
-            };
+            }
             $(window).scroll(function (e) {
 
             });
@@ -928,7 +932,7 @@ function initDropzone() {
             else { done(); }
         }
     };
-};
+}
 
 function initValidForm() {
     var form_valid = $(".js-form");
