@@ -279,6 +279,11 @@ function initSwiperGallery() {
     });
 }
 
+// function onYouTubeIframeAPIReady() {
+//     ytplayer = new YT.Player('player');
+// }
+
+
 function initPopupPortfolio() {
     $('.popup-portfolio').click(function () {
 
@@ -849,7 +854,7 @@ var AboutPage = Barba.BaseView.extend({
             });
         }
 
-        initVideo();
+        // initVideo();
         initSwiperGallery();
     }
 });
@@ -968,7 +973,7 @@ autoTextarea();
 scrollForm();
 // initFile();
 initMouseMove();
-initVideo();
+// initVideo();
 initSwiperGallery();
 initPopupPortfolio();
 initHoverSwiper();
