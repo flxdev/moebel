@@ -38,15 +38,11 @@ block content
                         h2.wrapper-about_title About <br> company
                         h4.wrapper-about_title-txt Our range includes over 250 different models of furniture. Our company is flexible, so we can produce the furniture according to your sketches. Are you looking for modern design and reliability, combined with the practicality and environ-mental performance? This is exactly what we offer!
                     .container-wrapper-about_video-img.parallax(data-speed='7')
-                        a(href="https://www.youtube.com/watch?v=_gnJF7s5JLk" data-fancybox).wrapper-about_video-img-box
+                        a(href="https://www.youtube.com/watch?v=_gnJF7s5JLk" data-fancybox data-src-video="https://www.youtube.com/embed/_gnJF7s5JLk").wrapper-about_video-img-box
                             .wrapper-about_img
                                 img(src='img/manufacture/img2.png' alt='')
                             .wrapper-about_video
-                                #player
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_gnJF7s5JLk" frameborder="0" allowfullscreen class="video"></iframe>
-                                //video.video
-                                //    source(src='video/primebeef.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
-                                //    source(src='video/primebeef.webm' type='video/webm; codecs="vp8, vorbis"')
+                                <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/_gnJF7s5JLk" frameborder="0" allowfullscreen></iframe>
                 .container-wrapper-stages-production
                     .wrapper-stages-production_content-image
                         .sticky

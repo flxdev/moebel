@@ -7,8 +7,6 @@
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
     <link rel="stylesheet" media="all" href="css/screen.min.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDeIX-qPM-OiBUCqhMfrcfp9tPwQdTZtM"></script>
-    <script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflS50iB-/www-widgetapi.js" async=""></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
   </head>
   <body>
     <script type="text/javascript">!function(e){function t(o){if(n[o])return n[o].exports;var c=n[o]={exports:{},id:o,loaded:!1};return e[o].call(c.exports,c,c.exports,t),c.loaded=!0,c.exports}var n={};return t.m=e,t.c=n,t.p="/assets/",t(0)}({0:function(e,t,n){n(18),n(19)},18:function(e,t){!function(){"use strict";function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(c))o(localStorage.font_css_cache);else{var e=new XMLHttpRequest;e.open("GET",c,!0),e.onreadystatechange=function(){4===e.readyState&&(o(e.responseText),localStorage.font_css_cache=e.responseText,localStorage.font_css_cache_file=c)},e.send()}else{var n=document.createElement("link");n.href=c,n.rel="stylesheet",n.type="text/css",document.getElementsByTagName("head")[0].appendChild(n),document.cookie="font_css_cache"}}function o(e){var t=document.createElement("style");t.setAttribute("type","text/css"),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t),window.onFontLoad&&window.onFontLoad()}var c=window.fonts_href||"../css/font.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}()},19:function(e,t){}});</script>
@@ -97,14 +95,9 @@
                 <h2 class="wrapper-about_title">About <br> company</h2>
                 <h4 class="wrapper-about_title-txt">Our range includes over 250 different models of furniture. Our company is flexible, so we can produce the furniture according to your sketches. Are you looking for modern design and reliability, combined with the practicality and environ-mental performance? This is exactly what we offer!</h4>
               </div>
-              <div class="container-wrapper-about_video-img parallax" data-speed="7"><a class="wrapper-about_video-img-box" href="https://www.youtube.com/watch?v=_gnJF7s5JLk" data-fancybox>
+              <div class="container-wrapper-about_video-img parallax" data-speed="7"><a class="wrapper-about_video-img-box" href="https://www.youtube.com/watch?v=_gnJF7s5JLk" data-fancybox data-src-video="https://www.youtube.com/embed/_gnJF7s5JLk">
                   <div class="wrapper-about_img"><img src="img/manufacture/img2.png" alt=""></div>
-                  <div class="wrapper-about_video">
-                    <div id="player"><iframe width="560" height="315" src="https://www.youtube.com/embed/watch?v=_gnJF7s5JLk" frameborder="0" allowfullscreen class="video"></iframe></div>
-                    <!--video.video-->
-                    <!--    source(src='video/primebeef.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')-->
-                    <!--    source(src='video/primebeef.webm' type='video/webm; codecs="vp8, vorbis"')-->
-                  </div></a></div>
+                  <div class="wrapper-about_video"><iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/_gnJF7s5JLk" frameborder="0" allowfullscreen></iframe></div></a></div>
             </div>
             <div class="container-wrapper-stages-production">
               <div class="wrapper-stages-production_content-image">
